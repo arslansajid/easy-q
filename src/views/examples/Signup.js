@@ -65,6 +65,7 @@ const Signup = (props) => {
                                         disabled={loading}
                                         block
                                         className="btn-round"
+                                        color="primary"
                                         onClick={() => onformSubmit()}>
                                         {loading ? "Please Wait" : "Sign Up"}
                                     </Button>
