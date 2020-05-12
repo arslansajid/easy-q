@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 
 const Footer = () => (
-  <div className="custom-footer">
+  <div className="custom-footer blue-bg">
     <div className="container-fluid py-3">
       <div className="row">
         <div className="col-lg-4 col-md-6 col-sm-12">
@@ -11,7 +11,7 @@ const Footer = () => (
           </div>
           <div className="links-container">
             <div className="my-3">
-              <i className="fas fa-2x fa-mobile-alt mr-3" />
+              <i className="fa fa-2x fa-mobile mr-3" />
               <span className="appStore-link">
                 EASY-Q App for iOS and Android
               </span>
@@ -31,12 +31,12 @@ const Footer = () => (
                 <span>Follow us</span>
               </div>
               <div className="follow-icons d-flex mt-3">
-                <i className="fab fa-instagram mr-4"></i>
-                <i className="fab fa-facebook-f mr-4"></i>
-                <i className="fab fa-twitter mr-4"></i>
-                <i className="fab fa-snapchat-ghost mr-4"></i>
-                <i className="fab fa-pinterest mr-4"></i>
-                <i className="fab fa-youtube mr-4"></i>
+                <i className="fa fa-instagram mr-4"></i>
+                <i className="fa fa-facebook-f mr-4"></i>
+                <i className="fa fa-twitter mr-4"></i>
+                <i className="fa fa-snapchat-ghost mr-4"></i>
+                <i className="fa fa-pinterest mr-4"></i>
+                <i className="fa fa-youtube mr-4"></i>
               </div>
             </div>
           </div>

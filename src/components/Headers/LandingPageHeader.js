@@ -27,13 +27,13 @@ function LandingPageHeader() {
     <>
       <div
         style={{
-          backgroundImage: "url(" + require("assets/img/daniel-olahh.jpg") + ")"
+          // backgroundImage: "url(" + require("assets/img/daniel-olahh.jpg") + ")"
         }}
-        className="page-header"
+        className="page-header blue-bg"
         data-parallax={true}
         ref={pageHeader}
       >
-        <div className="filter" />
+        {/* <div className="filter" /> */}
         <Container>
           <div className="motto text-center">
             <h1>Easy-Q</h1>

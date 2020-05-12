@@ -37,19 +37,18 @@ const Login = (props) => {
   return (
     <>
       <div
-        className="page-header"
+        className="blue-bg"
         style={{
-          // backgroundImage: "url(" + require("assets/img/daniel-olahh.jpg") + ")"
-          background: "#87ceeb"
+          height: "100%",
+          minHeight: "100vh"
         }}
       >
-        {/* <div className="filter" /> */}
-        <Container className="mt-0">
+        <Container>
           <Row>
             <Col className="ml-auto mr-auto" lg="4">
               <Link to="/"><h2 className="text-blue text-center">EASY-Q</h2></Link>
               <Card className="card-register ml-auto mr-auto">
-                <h3 className="title mx-auto">Welcome</h3>
+                <h3 className="title text-white mx-auto">Welcome</h3>
                 <div className="social-line text-center">
                   <Button
                     className="btn-neutral btn-just-icon mr-1"
@@ -93,7 +92,7 @@ const Login = (props) => {
                 <div className="forgot">
                   <Button
                     className="btn-link"
-                    color="danger"
+                    color="primary"
                     onClick={e => e.preventDefault()}
                   >
                     Forgot password?
