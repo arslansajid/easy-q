@@ -1,0 +1,86 @@
+import React from "react"
+import { Link } from "react-router-dom";
+import Cookie from "js-cookie"
+// reactstrap components
+import { Button, Card, Form, Input, Container, Row, Col } from "reactstrap";
+
+const Signup = (props) => {
+
+    const onformSubmit = () => {
+        Cookie.set('easyq_access_token', { expires: 14 })
+        props.history.push("/signin");
+    }
+
+    return (
+        <>
+            <div
+                className="page-header"
+                style={{
+                    background: "#87ceeb"
+                }}>
+                <Container className="mt-0">
+                    <Row>
+                        <Col className="ml-auto mr-auto" lg="4">
+                            <Link to="/"><h2 className="text-blue text-center">EASY-Q</h2></Link>
+                            <Card className="card-register ml-auto mr-auto">
+                                <h3 className="title mx-auto">Welcome</h3>
+                                <div className="social-line text-center">
+                                    <Button
+                                        className="btn-neutral btn-just-icon mr-1"
+                                        color="facebook"
+                                        href="#pablo"
+                                        onClick={e => e.preventDefault()}
+                                    >
+                                        <i className="fa fa-facebook-square" />
+                                    </Button>
+                                    <Button
+                                        className="btn-neutral btn-just-icon mr-1"
+                                        color="google"
+                                        href="#pablo"
+                                        onClick={e => e.preventDefault()}
+                                    >
+                                        <i className="fa fa-google-plus" />
+                                    </Button>
+                                    <Button
+                                        className="btn-neutral btn-just-icon"
+                                        color="twitter"
+                                        href="#pablo"
+                                        onClick={e => e.preventDefault()}
+                                    >
+                                        <i className="fa fa-twitter" />
+                                    </Button>
+                                </div>
+                                <Form className="register-form">
+                                    <label>Email</label>
+                                    <Input placeholder="Email" type="text" />
+                                    <label>Username</label>
+                                    <Input placeholder="username" type="text" />
+                                    <label>Password</label>
+                                    <Input placeholder="Password" type="password" />
+                                    <Button block className="btn-round"
+                                        onClick={() => onformSubmit()}>
+                                        Sign Up
+                                    </Button>
+                                </Form>
+                            </Card>
+                        </Col>
+                    </Row>
+                </Container>
+                <div className="footer register-footer text-center">
+                    <h6>
+                        Alreay have an account?
+                        <Link to="/login">
+                            <Button
+                                className="btn-link"
+                                color="danger">
+                                Sign In
+                            </Button>
+                        </Link>
+                    </h6>
+                </div>
+            </div>
+        </>
+    )
+}
+
+export default Signup;

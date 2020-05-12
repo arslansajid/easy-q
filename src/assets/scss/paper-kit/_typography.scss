@@ -133,3 +133,25 @@ blockquote small{
 .title.text-center{
     margin-bottom: 50px;
 }
+
+.text-white {
+    color: white;
+}
+
+.text-black {
+    color: black;
+}
+
+.text-light-blue {
+    color: #87ceeb;
+}
+
+.text-blue {
+    color: #172150;
+}
+
+.d-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

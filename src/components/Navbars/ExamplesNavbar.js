@@ -104,6 +104,11 @@ function ExamplesNavbar() {
               Profile
               </NavLink>
             </NavItem>
+            <NavItem>
+              <NavLink to="/logout" tag={Link}>
+              Log Out
+              </NavLink>
+            </NavItem>
           </Nav>
         </Collapse>
       </Container>

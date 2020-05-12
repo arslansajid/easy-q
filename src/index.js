@@ -7,24 +7,30 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "assets/css/bootstrap.min.css";
 import "assets/scss/paper-kit.scss";
 // pages
-import LandingPage from "views/examples/LandingPage.js";
-import ProfilePage from "views/examples/ProfilePage.js";
-import RegisterPage from "views/examples/RegisterPage.js";
+import App from "views/examples/App";
+import Login from "views/examples/Login";
+import Signup from "views/examples/Signup";
+import Logout from "views/examples/Logout";
 // others
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      <Route exact path="/" render={props => <LandingPage {...props} />} />
       <Route
-        path="/profile"
-        render={props => <ProfilePage {...props} />}
-      />
+        exact
+        path="/login" name="Login"
+        component={Login} />
       <Route
-        path="/register-page"
-        render={props => <RegisterPage {...props} />}
-      />
-      <Route path="/*" render={props => <h1>NO PAGE FOUND</h1>} />
+        exact
+        path="/signup" name="Signup"
+        component={Signup} />
+      <Route
+        exact
+        path="/logout" name="Logout"
+        component={Logout} />
+      <Route
+        path="/*" name="App"
+        component={App} />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")
