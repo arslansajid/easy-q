@@ -47,31 +47,31 @@ const Footer = () => (
           </div>
           <div className="links-container">
             <ul>
-              <Link href="/impressum/[slug]" as="/impressum/help-contact">
+              <Link to="/" as="/impressum/help-contact">
                 <li>{'Help & Contact us'}</li>
               </Link>
-              <Link href="/impressum/[slug]" as="/impressum/orders-shipping">
+              <Link to="/" as="/impressum/orders-shipping">
                 <li>{'Orders & Shipping'}</li>
               </Link>
-              <Link href="/impressum/[slug]" as="/impressum/payment-pricing">
+              <Link to="/" as="/impressum/payment-pricing">
                 <li>{'Payment & Pricing'}</li>
               </Link>
-              <Link href="/impressum/[slug]" as="/impressum/returns-refunds">
+              <Link to="/" as="/impressum/returns-refunds">
                 <li>{'Returns & Refunds'}</li>
               </Link>
-              <Link href="/impressum/[slug]" as="/impressum/click-collect">
+              <Link to="/" as="/impressum/click-collect">
                 <li>{'Click & Collect'}</li>
               </Link>
-              <Link href="/impressum/[slug]" as="/impressum/faq">
+              <Link to="/" as="/impressum/faq">
                 <li>{'FAQs'}</li>
               </Link>
-              <Link href="/impressum/[slug]" as="/impressum/terms-conditions">
+              <Link to="/" as="/impressum/terms-conditions">
                 <li>{'Terms & Conditions'}</li>
               </Link>
-              <Link href="/impressum/[slug]" as="/impressum/privacy-policy">
+              <Link to="/" as="/impressum/privacy-policy">
                 <li>{'Privacy Policy'}</li>
               </Link>
-              <Link href="/impressum/[slug]" as="/impressum/accessibility">
+              <Link to="/" as="/impressum/accessibility">
                 <li>{'Accessibility'}</li>
               </Link>
             </ul>
