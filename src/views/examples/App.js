@@ -20,7 +20,7 @@ class App extends React.Component {
   }
 
   componentWillMount() {
-    const { dispatch, history } = this.props;
+    const { history } = this.props;
     const token = Cookie.get('easyq_access_token');
     if (token) {
       this.setState({ loading: false });

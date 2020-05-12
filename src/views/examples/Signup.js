@@ -1,14 +1,17 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { Link } from "react-router-dom";
 import Cookie from "js-cookie"
 // reactstrap components
 import { Button, Card, Form, Input, Container, Row, Col } from "reactstrap";
 
 const Signup = (props) => {
+    const [loading, setLoading] = useState(false);
 
     const onformSubmit = () => {
-        Cookie.set('easyq_access_token', { expires: 14 })
-        props.history.push("/signin");
+        setLoading(true);
+        setTimeout(() => {
+            props.history.push("/login");
+        }, 1000);
     }
 
     return (
@@ -57,9 +60,12 @@ const Signup = (props) => {
                                     <Input placeholder="username" type="text" />
                                     <label>Password</label>
                                     <Input placeholder="Password" type="password" />
-                                    <Button block className="btn-round"
+                                    <Button
+                                        disabled={loading}
+                                        block
+                                        className="btn-round"
                                         onClick={() => onformSubmit()}>
-                                        Sign Up
+                                        {loading ? "Please Wait" : "Sign Up"}
                                     </Button>
                                 </Form>
                             </Card>

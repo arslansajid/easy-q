@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Cookie from "js-cookie"
 // reactstrap components
@@ -9,6 +9,9 @@ import { Button, Card, Form, Input, Container, Row, Col } from "reactstrap";
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 
 const Login = (props) => {
+  const [loading, setLoading] = useState(false);
+  const [display, setDisplay] = useState(false);
+
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
     document.body.classList.add("register-page");
@@ -17,11 +20,23 @@ const Login = (props) => {
     };
   });
 
-  const onformSubmit = () => {
-    Cookie.set('easyq_access_token', { expires: 14 })
-    props.history.push("/");
-  }
+  useEffect(() => {
+    const token = Cookie.get('easyq_access_token');
+    if (token) {
+      props.history.push("/");
+    } else {
+      setDisplay(true);
+    }
+  })
 
+  const onformSubmit = () => {
+    setLoading(true);
+    Cookie.set('easyq_access_token', { expires: 14 })
+    setTimeout(() => {
+      props.history.push("/");
+    }, 2000);
+  }
+  
   return (
     <>
       <div
@@ -69,10 +84,13 @@ const Login = (props) => {
                   <Input placeholder="Email" type="text" />
                   <label>Password</label>
                   <Input placeholder="Password" type="password" />
-                  <Button block className="btn-round"
+                  <Button
+                    disabled={loading}
+                    block
+                    className="btn-round"
                     onClick={() => onformSubmit()}
                   >
-                    Login
+                    {loading ? "Please Wait" : "Login"}
                   </Button>
                 </Form>
                 <div className="forgot">
