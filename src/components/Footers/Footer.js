@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 
 const Footer = () => (
-  <div className="custom-footer blue-bg">
+  <div className="custom-footer">
     <div className="container-fluid py-3">
       <div className="row">
         <div className="col-lg-4 col-md-6 col-sm-12">

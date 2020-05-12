@@ -154,18 +154,19 @@
 }
 
 .custom-footer .links-container li {
-    color: white;
+    color: black;
     line-height: 1.58em;
     cursor: pointer;
 }
 
 .custom-footer {
-    color: white;
+    color: black;
     font-weight: 500;
+    border-top: 1px solid #eeeeee;
 }
 
 .custom-footer a {
-    color: white;
+    color: black;
     text-decoration: none;
 }
 
