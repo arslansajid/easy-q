@@ -1,10 +1,17 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Switch, Route, withRouter } from 'react-router-dom';
 import Cookie from "js-cookie"
 
-import LandingPage from "./LandingPage.js";
-import ProfilePage from "./ProfilePage.js";
+import Navbar from "../../components/Navbars/ExamplesNavbar"
+import Footer from "../../components/Footers/Footer"
+
+import LandingPage from "./LandingPage";
+import ProfilePage from "./ProfilePage";
+import Bookings from "./Bookings";
+import Events from "./Events";
+import Schedule from "./Schedule";
+import Messages from "./Messages";
+import PageNotFound from "./PageNotFound";
 
 class App extends React.Component {
   constructor(props) {
@@ -32,14 +39,39 @@ class App extends React.Component {
   render() {
     return (
       <div className="app">
+        <Navbar />
         <Switch>
-          <Route exact path="/" render={props => <LandingPage {...props} />} />
+          <Route
+            exact
+            path="/"
+            render={props => <LandingPage {...props} />}
+          />
           <Route
             path="/profile"
             render={props => <ProfilePage {...props} />}
           />
-          <Route path="/*" render={props => <h1>NO PAGE FOUND</h1>} />
+          <Route
+            path="/bookings"
+            render={props => <Bookings {...props} />}
+          />
+          <Route
+            path="/events"
+            render={props => <Events {...props} />}
+          />
+          <Route
+            path="/schedule"
+            render={props => <Schedule {...props} />}
+          />
+          <Route
+            path="/messages"
+            render={props => <Messages {...props} />}
+          />
+          <Route
+            path="/*"
+            render={props => <PageNotFound {...props} />}
+          />
         </Switch>
+        <Footer />
       </div>
     );
   }

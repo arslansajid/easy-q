@@ -40,7 +40,6 @@ function ProfilePage() {
   });
   return (
     <>
-      <ExamplesNavbar />
       <ProfilePageHeader />
       <div className="section profile-content">
         <Container>
@@ -174,7 +173,6 @@ function ProfilePage() {
           </TabContent>
         </Container>
       </div>
-      <DemoFooter />
     </>
   );
 }

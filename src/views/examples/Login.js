@@ -5,12 +5,9 @@ import Cookie from "js-cookie"
 // reactstrap components
 import { Button, Card, Form, Input, Container, Row, Col } from "reactstrap";
 
-// core components
-import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
-
 const Login = (props) => {
   const [loading, setLoading] = useState(false);
-  const [display, setDisplay] = useState(false);
+  // const [display, setDisplay] = useState(false);
 
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
@@ -25,7 +22,7 @@ const Login = (props) => {
     if (token) {
       props.history.push("/");
     } else {
-      setDisplay(true);
+      // setDisplay(true);
     }
   })
 

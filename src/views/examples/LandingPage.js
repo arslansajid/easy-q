@@ -21,8 +21,6 @@ import {
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import LandingPageHeader from "components/Headers/LandingPageHeader.js";
-import IndexHeader from "components/Headers/IndexHeader";
-import DemoFooter from "components/Footers/DemoFooter.js";
 import Footer from "components/Footers/Footer";
 
 function LandingPage() {
@@ -35,7 +33,6 @@ function LandingPage() {
   });
   return (
     <>
-      <ExamplesNavbar />
       <LandingPageHeader />
       <div className="main">
         <div className="section text-center">
@@ -346,8 +343,6 @@ function LandingPage() {
           </Container>
         </div>
       </div>
-      {/* <DemoFooter /> */}
-      <Footer />
     </>
   );
 }

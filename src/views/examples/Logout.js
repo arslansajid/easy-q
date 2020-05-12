@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import Cookie from 'js-cookie';
 
 class Logout extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   componentWillMount() {
     if (process.env.NODE_ENV === 'production') {
@@ -18,7 +15,9 @@ class Logout extends Component {
   }
 
   render() {
-    return null
+    return (
+      <div></div>
+    );
   }
 }
 

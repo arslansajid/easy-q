@@ -21,7 +21,7 @@ function LandingPageHeader() {
         window.removeEventListener("scroll", updateScroll);
       };
     }
-  });
+  }, []);
 
   return (
     <>
