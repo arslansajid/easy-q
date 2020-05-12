@@ -1,15 +1,11 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
-import BookingCard from "../../components/BookingCard"
+import BookingCard from "../../components/BookingCard";
 
 const Bookings = () => {
     const count = 5;
     return (
-        <div
-            style={{
-                background: "#87ceeb"
-            }}
-        >
+        <div className="section blue-bg">
             <Container className="py-5">
                 <Row>
                     <Col lg="12">
