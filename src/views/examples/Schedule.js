@@ -3,6 +3,7 @@ import { Container, Row, Col } from "reactstrap";
 import BookingCard from "../../components/BookingCard";
 
 const Schedule = () => {
+    document.documentElement.classList.remove("nav-open");
     const count = 3;
     return (
         <div className="section blue-bg">

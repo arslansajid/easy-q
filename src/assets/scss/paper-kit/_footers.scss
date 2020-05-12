@@ -153,20 +153,17 @@
     padding-top: 10px;
 }
 
-.custom-footer .links-container li {
-    color: black;
-    line-height: 1.58em;
-    cursor: pointer;
-}
-
 .custom-footer {
-    color: black;
+    background-color: #172a53;
+    color: white;
     font-weight: 500;
-    border-top: 1px solid #eeeeee;
+    // border-top: 1px solid #eeeeee;
+    font-size: 14px;
+    line-height: 2em;
 }
 
 .custom-footer a {
-    color: black;
+    color: white;
     text-decoration: none;
 }
 

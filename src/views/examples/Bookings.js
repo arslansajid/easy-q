@@ -3,6 +3,7 @@ import { Container, Row, Col } from "reactstrap";
 import BookingCard from "../../components/BookingCard";
 
 const Bookings = () => {
+    document.documentElement.classList.remove("nav-open");
     const count = 5;
     return (
         <div className="section blue-bg">

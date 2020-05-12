@@ -23,7 +23,7 @@ import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import LandingPageHeader from "components/Headers/LandingPageHeader.js";
 import Footer from "components/Footers/Footer";
 
-function LandingPage() {
+const LandingPage = () => {
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
     document.body.classList.add("profile-page");

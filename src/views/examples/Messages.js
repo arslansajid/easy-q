@@ -3,6 +3,7 @@ import { Container, Row, Col } from "reactstrap";
 import MessageCard from "../../components/MessageCard";
 
 const Messages = () => {
+    document.documentElement.classList.remove("nav-open");
     const count = 3;
     return (
         <div className="section blue-bg">

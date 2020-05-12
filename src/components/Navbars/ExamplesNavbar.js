@@ -80,6 +80,11 @@ function ExamplesNavbar() {
           isOpen={navbarCollapse}
         >
           <Nav navbar>
+          <NavItem className="d-none d-sm-block">
+              <NavLink to="/" tag={Link}>
+                Home
+              </NavLink>
+            </NavItem>
             <NavItem>
               <NavLink to="/bookings" tag={Link}>
                 Bookings

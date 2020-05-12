@@ -5,7 +5,7 @@ const Footer = () => (
   <div className="custom-footer">
     <div className="container-fluid py-3">
       <div className="row">
-        <div className="col-lg-4 col-md-6 col-sm-12">
+        <div className="col-lg-4 col-md-6 col-6 mb-5">
           <div className="heading">
             <span>Mobile App</span>
           </div>
@@ -18,7 +18,7 @@ const Footer = () => (
             </div>
           </div>
         </div>
-        <div className="col-lg-4 col-md-6 col-sm-12">
+        <div className="col-lg-4 col-md-6 col-6 mb-5">
           <div className="heading">
             <span>Destination/Region, Currency and Language</span>
           </div>
@@ -41,7 +41,7 @@ const Footer = () => (
             </div>
           </div>
         </div>
-        <div className="col-lg-2 col-md-6 col-sm-12">
+        <div className="col-lg-2 col-md-6 col-6 mb-5">
           <div className="heading">
             <span>Customer Service</span>
           </div>
@@ -77,7 +77,7 @@ const Footer = () => (
             </ul>
           </div>
         </div>
-        <div className="col-lg-2 col-md-6 col-sm-12">
+        <div className="col-lg-2 col-md-6 col-6 mb-5">
           <div className="heading">
             <span>About EASY-Q</span>
           </div>
@@ -96,7 +96,7 @@ const Footer = () => (
           </div>
         </div>
       </div>
-      <div className="mt-5 baseline">
+      <div className="mt-3 baseline">
         <div>© Copyright 2019 EASY-Q UK Limited. All rights reserved.</div>
       </div>
     </div>
