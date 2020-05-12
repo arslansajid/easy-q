@@ -6,13 +6,13 @@ const BookingCard = () => {
         <Card className="booking-card">
             <Container>
                 <Row>
-                    <Col lg="6" md="6">
+                    <Col lg="6" md="6" className="py-2">
                         <h3>Title</h3>
                         <p>Lorem ipsum data</p>
                         <p>Lorem ipsum data</p>
                         <p>Lorem ipsum data</p>
                     </Col>
-                    <Col lg="6" md="6">
+                    <Col lg="6" md="6" className="py-2">
                         <h3>Details</h3>
                         <p>Lorem ipsum data</p>
                         <p>Lorem ipsum data</p>
