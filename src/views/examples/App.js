@@ -67,6 +67,10 @@ class App extends React.Component {
             render={props => <Messages {...props} />}
           />
           <Route
+            path="/buyers"
+            render={props => <Messages {...props} />}
+          />
+          <Route
             path="/*"
             render={props => <PageNotFound {...props} />}
           />

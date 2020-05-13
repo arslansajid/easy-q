@@ -2,6 +2,27 @@ import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import BookingCard from "../../components/BookingCard";
 
+const shops = [
+    {
+        name: "The Body Shop",
+        location: "Location: Shop # 218, Giga Mall, Islamabad, Pakistan.",
+        date: "Sunday, 12-May-2020",
+        bookings: 214,
+    },
+    {
+        name: "Carrefour",
+        location: "Location: Shop # 218, Centaurus Mall, Islamabad, Pakistan.",
+        date: "Sunday, 4-August-2020",
+        bookings: 71,
+    },
+    {
+        name: "HyperStar",
+        location: "Location: Shop # 551, Giga Mall, Lahore, Pakistan.",
+        date: "Sunday, 29-June-2020",
+        bookings: 146,
+    },
+]
+
 const Bookings = () => {
     document.documentElement.classList.remove("nav-open");
     const count = 5;
@@ -13,9 +34,15 @@ const Bookings = () => {
                         <h1 className="py-3 text-white">Bookings</h1>
                     </Col>
                     <Col className="ml-auto mr-auto" lg="6">
-                        {[...Array(count)].map((e, index) => {
+                        {shops.map((shop, index) => {
                             return (
-                                <BookingCard />
+                                <BookingCard
+                                    index={index}
+                                    name={shop.name}
+                                    location={shop.location}
+                                    date={shop.date}
+                                    bookings={shop.bookings}
+                                />
                             )
                         })}
                     </Col>
