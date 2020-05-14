@@ -3,9 +3,9 @@ import {Link} from 'react-router-dom'
 
 const Footer = () => (
   <div className="custom-footer">
-    <div className="container-fluid py-3">
+    <div className="container py-3">
       <div className="row">
-        <div className="col-lg-4 col-md-6 col-6 mb-5">
+        <div className="col-lg-4 col-md-6 col-12 mb-5">
           <div className="heading">
             <span>Mobile App</span>
           </div>
@@ -18,7 +18,7 @@ const Footer = () => (
             </div>
           </div>
         </div>
-        <div className="col-lg-4 col-md-6 col-6 mb-5">
+        <div className="col-lg-4 col-md-6 col-12 mb-5">
           <div className="heading">
             <span>Destination/Region, Currency and Language</span>
           </div>
@@ -88,7 +88,7 @@ const Footer = () => (
               <li>{'Boutique Partners'}</li>
               <li>{'Affiliate Programme'}</li>
               <li>{'Careers'}</li>
-              <li>{'Farfetch Customer Promise'}</li>
+              <li>{'Easy-Q Customer Promise'}</li>
               <li>{'Mobile App'}</li>
               <li>{'Sitemap'}</li>
               <li>{'Positively'}</li>
