@@ -14,6 +14,23 @@ const Footer = () => (
               <i className="fa fa-2x fa-mobile mr-3" />
               <span className="appStore-link">
                 EASY-Q App for iOS and Android
+                <div className="mt-3">
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://apps.apple.com/us/app/roomy-pk-hotels/id1463746734?mt=8"
+                    >
+                      <img src="https://roomypk.s3-eu-west-1.amazonaws.com/images/app_btn.svg" alt="" />
+                    </a>
+
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://play.google.com/store/apps/details?id=pk.roomy.app"
+                    >
+                      <img className="ml-2" src="https://roomypk.s3-eu-west-1.amazonaws.com/images/google_btn.svg" alt="" />
+                    </a>
+                  </div>
               </span>
             </div>
           </div>
