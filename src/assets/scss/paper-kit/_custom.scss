@@ -27,3 +27,24 @@
     min-height: 130px;
     border-radius: 12px !important;
 }
+
+.user-img {
+    max-width: 130px !important;
+    min-height: 130px !important;
+    object-fit: contain;
+}
+
+.user-qr {
+    max-width: 130px !important;
+    min-height: 130px !important;
+    object-fit: contain;
+}
+
+@media (max-width: 767px){
+    .user-card .images-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+}

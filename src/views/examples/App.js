@@ -11,6 +11,7 @@ import Bookings from "./Bookings";
 import Events from "./Events";
 import Schedule from "./Schedule";
 import Messages from "./Messages";
+import Buyers from "./Buyers";
 import PageNotFound from "./PageNotFound";
 
 class App extends React.Component {
@@ -68,7 +69,7 @@ class App extends React.Component {
           />
           <Route
             path="/buyers"
-            render={props => <Messages {...props} />}
+            render={props => <Buyers {...props} />}
           />
           <Route
             path="/*"
