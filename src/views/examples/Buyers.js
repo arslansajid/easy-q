@@ -27,7 +27,7 @@ const buyers = [
         phone: "123-987-654",
     },
 ]
-const Buyers = () => {
+const Buyers = (props) => {
     document.documentElement.classList.remove("nav-open");
     const [open, setOpen] = React.useState(false);
     const [message, setMessage] = React.useState("");
@@ -45,7 +45,12 @@ const Buyers = () => {
         <div className="section blue-bg">
             <Container className="py-5">
                 <Row>
-                    <Col lg="12">
+                    <Col lg="12 d-flex align-items-center">
+                        <div onClick={() => props.history.goBack()} className="back-button">
+                            <i
+                                className="fa fa-2x fa-arrow-left text-white mr-3"
+                            />
+                        </div>
                         <h1 className="py-3 text-white">Buyers</h1>
                     </Col>
                     <Col className="ml-auto mr-auto" lg="6">
@@ -72,7 +77,7 @@ const Buyers = () => {
                     open={open}
                     autoHideDuration={2000}
                     onClose={handleClose}
-                    message={`User has been ${message}`}
+                    message={`User has been ${message}d`}
                     action={
                         <IconButton size="small" aria-label="close" color="inherit" onClick={handleClose}>
                             <i className="fa fa-times-circle" />
