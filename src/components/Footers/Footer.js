@@ -20,7 +20,7 @@ const Footer = () => (
                       rel="noopener noreferrer"
                       href="https://apps.apple.com/us/app/roomy-pk-hotels/id1463746734?mt=8"
                     >
-                      <img src="https://roomypk.s3-eu-west-1.amazonaws.com/images/app_btn.svg" alt="" />
+                      <img src={require("../../assets/img/a_store.svg")} alt="" />
                     </a>
 
                     <a
@@ -28,7 +28,7 @@ const Footer = () => (
                       rel="noopener noreferrer"
                       href="https://play.google.com/store/apps/details?id=pk.roomy.app"
                     >
-                      <img className="ml-2" src="https://roomypk.s3-eu-west-1.amazonaws.com/images/google_btn.svg" alt="" />
+                      <img className="ml-2" src={require("../../assets/img/p_store.svg")} alt="" />
                     </a>
                   </div>
               </span>
