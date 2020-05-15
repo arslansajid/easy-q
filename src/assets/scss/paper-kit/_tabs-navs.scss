@@ -20,19 +20,19 @@
 }
 .nav-tabs {
         border-bottom: 0 none;
-        font-size: $font-size-medium;
+        font-size: $font-size-large;
         font-weight: $font-weight-bold;
         .nav-item{
             .nav-link{
                 border: 0 none;
-                color: $other-medium-gray;
+                color: $white-color;
                 background-color: transparent;
             }
             .nav-link:hover{
-                color: $font-color;
+                color: $danger-color;
             }
             .nav-link.active{
-                color: $font-color;
+                color: $danger-color;
             }
         }
 
