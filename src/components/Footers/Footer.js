@@ -18,7 +18,7 @@ const Footer = () => (
             </div>
           </div>
         </div>
-        <div className="col-lg-4 col-md-6 col-12 mb-5">
+        {/* <div className="col-lg-4 col-md-6 col-12 mb-5">
           <div className="heading">
             <span>Destination/Region, Currency and Language</span>
           </div>
@@ -40,8 +40,8 @@ const Footer = () => (
               </div>
             </div>
           </div>
-        </div>
-        <div className="col-lg-2 col-md-6 col-6 mb-5">
+        </div> */}
+        {/* <div className="col-lg-2 col-md-6 col-6 mb-5">
           <div className="heading">
             <span>Customer Service</span>
           </div>
@@ -76,8 +76,8 @@ const Footer = () => (
               </Link>
             </ul>
           </div>
-        </div>
-        <div className="col-lg-2 col-md-6 col-6 mb-5">
+        </div> */}
+        {/* <div className="col-lg-2 col-md-6 col-6 mb-5">
           <div className="heading">
             <span>About EASY-Q</span>
           </div>
@@ -94,7 +94,7 @@ const Footer = () => (
               <li>{'Positively'}</li>
             </ul>
           </div>
-        </div>
+        </div> */}
       </div>
       <div className="mt-3 baseline">
         <div>© Copyright 2019 EASY-Q UK Limited. All rights reserved.</div>
