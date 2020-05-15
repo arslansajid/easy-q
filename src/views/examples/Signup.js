@@ -25,7 +25,7 @@ const Signup = (props) => {
                 <Container>
                     <Row>
                         <Col className="ml-auto mr-auto" lg="4">
-                            <Link to="/"><h2 className="text-blue text-center">EASY-Q</h2></Link>
+                            <Link to="/"><h2 className="text-blue text-center mt-4">EASY-Q</h2></Link>
                             <Card className="card-register ml-auto mr-auto">
                                 <h3 className="title text-white mx-auto">Welcome</h3>
                                 <div className="social-line text-center">
