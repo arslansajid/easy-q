@@ -63,7 +63,7 @@ const LandingPage = () => {
                       <InputGroup>
                         <InputGroupAddon addonType="prepend">
                           <InputGroupText>
-                            <i className="nc-icon nc-single-02" />
+                            <i className="fa fa-user" />
                           </InputGroupText>
                         </InputGroupAddon>
                         <Input placeholder="Name" type="text" />
@@ -74,7 +74,7 @@ const LandingPage = () => {
                       <InputGroup>
                         <InputGroupAddon addonType="prepend">
                           <InputGroupText>
-                            <i className="nc-icon nc-email-85" />
+                            <i className="fa fa-envelope" />
                           </InputGroupText>
                         </InputGroupAddon>
                         <Input placeholder="Email" type="text" />
