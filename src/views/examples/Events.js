@@ -1,5 +1,5 @@
 import React from "react";
-import BookingCard from "../../components/BookingCard";
+import UserCard from "../../components/UserCard";
 import {
     Button,
     Label,
@@ -14,6 +14,30 @@ import {
     Row,
     Col
 } from "reactstrap";
+
+const buyers = [
+    {
+        userId: 213,
+        name: "Shahid Afridi",
+        email: "asd@email.com",
+        address: "Location: Shop # 218, Giga Mall, Islamabad, Pakistan.",
+        phone: "123-987-654",
+    },
+    {
+        userId: 346,
+        name: "Wasim Akram",
+        email: "asd@email.com",
+        address: "Location: Shop # 218, Giga Mall, Islamabad, Pakistan.",
+        phone: "123-987-654",
+    },
+    {
+        userId: 853,
+        name: "Imran Khan",
+        email: "asd@email.com",
+        address: "Location: Shop # 218, Giga Mall, Islamabad, Pakistan.",
+        phone: "123-987-654",
+    },
+]
 
 const Events = (props) => {
     document.documentElement.classList.remove("nav-open");
@@ -87,10 +111,18 @@ const Events = (props) => {
                             ?
                             <Col className="ml-auto mr-auto" lg="6">
                                 <h3 className="text-white mb-3">Total Users: 90</h3>
-                                {[...Array(count)].map((e, index) => {
+                                {buyers.map((buyer, index) => {
                                     return (
                                         <div key={index}>
-                                            <BookingCard />
+                                            <UserCard
+                                                index={index}
+                                                userId={buyer.userId}
+                                                name={buyer.name}
+                                                email={buyer.email}
+                                                address={buyer.address}
+                                                phone={buyer.phone}
+                                                hideButtons={true}
+                                            />
                                         </div>
                                     )
                                 })}
@@ -104,10 +136,18 @@ const Events = (props) => {
                             :
                             <Col className="ml-auto mr-auto" lg="6">
                                 <h3 className="text-white mb-3">Total Users: 87</h3>
-                                {[...Array(count)].map((e, index) => {
+                                {buyers.map((buyer, index) => {
                                     return (
                                         <div key={index}>
-                                            <BookingCard />
+                                            <UserCard
+                                                index={index}
+                                                userId={buyer.userId}
+                                                name={buyer.name}
+                                                email={buyer.email}
+                                                address={buyer.address}
+                                                phone={buyer.phone}
+                                                hideButtons={true}
+                                            />
                                         </div>
                                     )
                                 })}
