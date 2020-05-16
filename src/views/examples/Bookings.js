@@ -25,7 +25,6 @@ const shops = [
 
 const Bookings = (props) => {
     document.documentElement.classList.remove("nav-open");
-    const count = 5;
     return (
         <div className="section blue-bg">
             <Container className="py-5">
@@ -41,13 +40,15 @@ const Bookings = (props) => {
                     <Col className="ml-auto mr-auto" lg="6">
                         {shops.map((shop, index) => {
                             return (
-                                <BookingCard
-                                    index={index}
-                                    name={shop.name}
-                                    location={shop.location}
-                                    date={shop.date}
-                                    bookings={shop.bookings}
-                                />
+                                <div key={index}>
+                                    <BookingCard
+                                        index={index}
+                                        name={shop.name}
+                                        location={shop.location}
+                                        date={shop.date}
+                                        bookings={shop.bookings}
+                                    />
+                                </div>
                             )
                         })}
                     </Col>

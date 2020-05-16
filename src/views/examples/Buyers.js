@@ -3,6 +3,8 @@ import { Container, Row, Col } from "reactstrap";
 import UserCard from "../../components/UserCard";
 import Snackbar from '@material-ui/core/Snackbar';
 import IconButton from '@material-ui/core/IconButton';
+import DatePicker from "../../components/Pickers"
+import CustomDatePicker from "../../components/Pickers/CustomDatePicker/component"
 
 const buyers = [
     {
@@ -30,16 +32,27 @@ const buyers = [
 const Buyers = (props) => {
     document.documentElement.classList.remove("nav-open");
     const [open, setOpen] = React.useState(false);
+    const [isDatePickerOpen, setIsDatePickerOpen] = React.useState(false);
     const [message, setMessage] = React.useState("");
 
     const handleClick = (value) => {
-        setOpen(true);
         setMessage(value);
+        if (value === "Reschedule") {
+            setIsDatePickerOpen(true);
+        } else {
+            setOpen(true);
+        }
     };
 
     const handleClose = () => {
         setOpen(false);
     };
+
+    const onDatePickerClose = () => {
+        setMessage("Reschedule");
+        setIsDatePickerOpen(false)
+        setOpen(true);
+    }
 
     return (
         <div className="section blue-bg">
@@ -56,19 +69,26 @@ const Buyers = (props) => {
                     <Col className="ml-auto mr-auto" lg="6">
                         {buyers.map((buyer, index) => {
                             return (
-                                <UserCard
-                                    index={index}
-                                    userId={buyer.userId}
-                                    name={buyer.name}
-                                    email={buyer.email}
-                                    address={buyer.address}
-                                    phone={buyer.phone}
-                                    handleClick={handleClick}
-                                />
+                                <div key={index}>
+                                    <UserCard
+                                        index={index}
+                                        userId={buyer.userId}
+                                        name={buyer.name}
+                                        email={buyer.email}
+                                        address={buyer.address}
+                                        phone={buyer.phone}
+                                        handleClick={handleClick}
+                                    />
+                                </div>
                             )
                         })}
                     </Col>
                 </Row>
+                <DatePicker
+                    isOpen={isDatePickerOpen}
+                    setIsOpen={setIsDatePickerOpen}
+                    onDatePickerClose={onDatePickerClose}
+                />
                 <Snackbar
                     anchorOrigin={{
                         vertical: 'bottom',
