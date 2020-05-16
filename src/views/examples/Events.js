@@ -1,18 +1,18 @@
 import React from "react";
 import UserCard from "../../components/UserCard";
+import QRScanner from "../../components/QRScanner";
 import {
     Button,
-    Label,
-    FormGroup,
-    Input,
     NavItem,
     NavLink,
     Nav,
-    TabContent,
-    TabPane,
     Container,
     Row,
-    Col
+    Col,
+    Modal,
+    ModalBody,
+    ModalHeader,
+    ModalFooter
 } from "reactstrap";
 
 const buyers = [
@@ -43,6 +43,7 @@ const Events = (props) => {
     document.documentElement.classList.remove("nav-open");
 
     const [activeTab, setActiveTab] = React.useState("1");
+    const [showScanner, setShowScanner] = React.useState(false);
 
     const toggle = tab => {
         if (activeTab !== tab) {
@@ -50,7 +51,6 @@ const Events = (props) => {
         }
     };
 
-    let count = 3;
     return (
         <div className="section blue-bg">
             <Container className="py-5">
@@ -65,7 +65,7 @@ const Events = (props) => {
 
                     </Col>
                     <Col className="ml-auto mr-auto" lg="6">
-                        <Button className="w-100 mb-5" color="danger" size="lg">SCAN</Button>
+                        <Button onClick={() => setShowScanner(true)} className="w-100 mb-5" color="danger" size="lg">SCAN</Button>
                     </Col>
                     <Col lg="12">
                         <div className="nav-tabs-navigation">
@@ -129,32 +129,49 @@ const Events = (props) => {
                             </Col>
                             :
                             activeTab === "2"
-                            ?
-                            <Col className="ml-auto mr-auto" lg="6">
-                                <h1 className="text-white">No records found!</h1>
-                            </Col>
-                            :
-                            <Col className="ml-auto mr-auto" lg="6">
-                                <h3 className="text-white mb-3">Total Users: 87</h3>
-                                {buyers.map((buyer, index) => {
-                                    return (
-                                        <div key={index}>
-                                            <UserCard
-                                                index={index}
-                                                userId={buyer.userId}
-                                                name={buyer.name}
-                                                email={buyer.email}
-                                                address={buyer.address}
-                                                phone={buyer.phone}
-                                                hideButtons={true}
-                                            />
-                                        </div>
-                                    )
-                                })}
-                            </Col>
-                        }
+                                ?
+                                <Col className="ml-auto mr-auto" lg="6">
+                                    <h1 className="text-white">No records found!</h1>
+                                </Col>
+                                :
+                                <Col className="ml-auto mr-auto" lg="6">
+                                    <h3 className="text-white mb-3">Total Users: 87</h3>
+                                    {buyers.map((buyer, index) => {
+                                        return (
+                                            <div key={index}>
+                                                <UserCard
+                                                    index={index}
+                                                    userId={buyer.userId}
+                                                    name={buyer.name}
+                                                    email={buyer.email}
+                                                    address={buyer.address}
+                                                    phone={buyer.phone}
+                                                    hideButtons={true}
+                                                />
+                                            </div>
+                                        )
+                                    })}
+                                </Col>
+                    }
                 </Row>
             </Container>
+            {
+                showScanner && (
+                    <Modal
+                        size={"lg"}
+                        fade={false}
+                        backdrop={"static"}
+                        isOpen={showScanner} toggle={() => setShowScanner(!showScanner)}>
+                        <ModalHeader>SCAN QR</ModalHeader>
+                        <ModalBody className="d-flex justify-content-center align-items-center">
+                            <QRScanner />
+                        </ModalBody>
+                        <ModalFooter className="p-2">
+                            <Button color="success" onClick={() => setShowScanner(false)} size="large" className="">Next</Button>
+                            <Button color="danger" onClick={() => setShowScanner(false)} size="large" className="">Cancel</Button>
+                        </ModalFooter>
+                    </Modal>
+                )}
         </div>
     )
 }
