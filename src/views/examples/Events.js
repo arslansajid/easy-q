@@ -162,7 +162,7 @@ const Events = (props) => {
                         fade={false}
                         backdrop={"static"}
                         isOpen={showScanner} toggle={() => setShowScanner(!showScanner)}>
-                        <ModalHeader>SCAN QR</ModalHeader>
+                        <ModalHeader className="text-black">SCAN QR</ModalHeader>
                         <ModalBody className="d-flex justify-content-center align-items-center">
                             <QRScanner />
                         </ModalBody>
