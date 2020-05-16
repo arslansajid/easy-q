@@ -6,9 +6,6 @@ const Footer = () => (
     <div className="container py-3">
       <div className="row">
         <div className="col-lg-4 col-md-6 col-12 mb-5">
-          <div className="heading">
-            <span>Mobile App</span>
-          </div>
           <div className="links-container">
             <div className="my-3">
               <i className="fa fa-2x fa-mobile mr-3" />

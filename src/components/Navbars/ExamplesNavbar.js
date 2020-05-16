@@ -59,7 +59,7 @@ function ExamplesNavbar() {
             title="EASY-Q Home"
             tag={Link}
           >
-            <img className="logo" src={require("../../assets/img/easyq.jpeg")} />
+            <img className="logo" src={require("../../assets/img/ELogo1024.png")} />
             EASY-Q
           </NavbarBrand>
           <button
