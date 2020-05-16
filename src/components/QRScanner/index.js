@@ -3,8 +3,7 @@ import QrReader from 'react-qr-reader'
 
 class QRScanner extends Component {
     state = {
-        result: 'No result',
-        error: 'No error'
+        result: 'No result'
     }
 
     handleScan = data => {
@@ -15,10 +14,7 @@ class QRScanner extends Component {
         }
     }
     handleError = err => {
-        console.error(err);
-        this.setState({
-            error: err.message
-        })
+        console.error(err)
     }
     render() {
         return (
@@ -28,9 +24,7 @@ class QRScanner extends Component {
                     onError={this.handleError}
                     onScan={this.handleScan}
                     style={{ width: "350px", maxHeight: "350px" }}
-                    legacyMode={true}
                 />
-                <p>{this.state.result}</p>
                 <p>{this.state.result}</p>
             </div>
         )
