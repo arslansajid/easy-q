@@ -3,7 +3,7 @@ import { Container, Row, Col, Card, Button } from "reactstrap";
 import { Link } from "react-router-dom";
 
 const UserCard = (props) => {
-    const { index, userId, name, email, address, phone, handleClick } = props;
+    const { index, userId, name, email, address, phone, handleClick, hideButtons } = props;
 
     return (
         <Card key={index} className="user-card">
@@ -19,6 +19,7 @@ const UserCard = (props) => {
                         <h4 className="mb-2">{email}</h4>
                         <h4 className="mb-2">{phone}</h4>
                         <h5 className="mb-2">{address}</h5>
+                        {!hideButtons && (
                         <div className="d-flex justify-content-between align-items-center mt-3">
                             {/* <img src={require("../../assets/img/qr.png")} alt="qr-img" /> */}
                             {/* <h5>QR: {qrCode}</h5> */}
@@ -44,6 +45,7 @@ const UserCard = (props) => {
                                 Postpone
                             </Button>
                         </div>
+                        )}
                     </Col>
                 </Row>
             </Container>

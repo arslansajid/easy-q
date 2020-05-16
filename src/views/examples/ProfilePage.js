@@ -22,7 +22,7 @@ import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import ProfilePageHeader from "components/Headers/ProfilePageHeader.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
 
-function ProfilePage() {
+function ProfilePage(props) {
   const [activeTab, setActiveTab] = React.useState("1");
 
   const toggle = tab => {
@@ -40,38 +40,44 @@ function ProfilePage() {
   });
   return (
     <>
-      <ProfilePageHeader />
-      <div className="section profile-content">
-        <Container>
-          <div className="owner">
-            <div className="avatar">
-              <img
-                alt="..."
-                className="img-circle img-no-padding img-responsive"
-                src={require("assets/img/faces/joe-gardner-2.jpg")}
-              />
-            </div>
-            <div className="name">
-              <h4 className="title">
-                Jane Faker <br />
-              </h4>
-              <h6 className="description">Music Producer</h6>
-            </div>
-          </div>
+      <div className="section blue-bg">
+        <Container className="py-5">
           <Row>
-            <Col className="ml-auto mr-auto text-center" md="6">
-              <p>
-                An artist of considerable range, Jane Faker — the name taken by
-                Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs
-                and records all of his own music, giving it a warm, intimate
-                feel with a solid groove structure.
-              </p>
-              <br />
-              <Button className="btn-round" color="default" outline>
-                <i className="fa fa-cog" /> Settings
-              </Button>
+            <Col lg="12" className="d-flex align-items-center">
+              <div onClick={() => props.history.goBack()} className="back-button">
+                <i
+                  className="fa fa-2x fa-arrow-left text-white mr-3"
+                />
+              </div>
+              <h1 className="py-3 text-white">Profile</h1>
             </Col>
-          </Row>
+            </Row>
+            <Row className="py-5">
+            <Col className="py-5" lg="4">
+              <div className="owner">
+                <div className="avatar">
+                  <img
+                    alt="..."
+                    className="img-circle img-no-padding img-responsive"
+                    src={require("assets/img/faces/joe-gardner-2.jpg")}
+                  />
+                </div>
+                <div className="name">
+                  <h4 className="text-white">
+                    SHAHID AFRIDI <br />
+                  </h4>
+                  <h6 className="text-white">Music Producer</h6>
+                </div>
+              </div>
+            </Col>
+            <Col className="text-white" lg="8">
+                  <h5 className="mb-3">ID: {"123123"}</h5>
+                  <h3 className="mb-3">Name: {"Shahid Afridi"}</h3>
+                  <h4 className="mb-3">Email: {"shahid.afridi@email.com"}</h4>
+                  <h4 className="mb-3">Phone: {"324-546-123"}</h4>
+                  <h5 className="mb-3">Address: {"House # 214 Abc Town, Pakistan"}</h5>
+            </Col>
+            </Row>
         </Container>
       </div>
     </>
