@@ -2,11 +2,20 @@
 import React from "react";
 
 // reactstrap components
-import { Button, Container } from "reactstrap";
+import {
+  Button,
+  Container,
+  Modal,
+  ModalBody,
+  ModalHeader,
+  ModalFooter,
+} from "reactstrap";
 
 // core components
+import QRScanner from "../../components/QRScanner";
 
 function LandingPageHeader() {
+  const [showScanner, setShowScanner] = React.useState(false);
   let pageHeader = React.createRef();
 
   React.useEffect(() => {
@@ -48,12 +57,29 @@ function LandingPageHeader() {
               <i className="fa fa-play" />
               How it Works
             </Button>
-            <Button className="btn-round" color="neutral" type="button" outline>
+            <Button onClick={() => setShowScanner(true)} className="btn-round" color="neutral" type="button" outline>
               Scan QR
             </Button>
           </div>
         </Container>
       </div>
+      {
+        showScanner && (
+          <Modal
+            size={"lg"}
+            fade={false}
+            backdrop={"static"}
+            isOpen={showScanner} toggle={() => setShowScanner(!showScanner)}>
+            <ModalHeader className="text-black">SCAN QR</ModalHeader>
+            <ModalBody className="d-flex justify-content-center align-items-center">
+              <QRScanner />
+            </ModalBody>
+            <ModalFooter className="p-2">
+              <Button color="success" onClick={() => setShowScanner(false)} size="large" className="">Next</Button>
+              <Button color="danger" onClick={() => setShowScanner(false)} size="large" className="">Cancel</Button>
+            </ModalFooter>
+          </Modal>
+        )}
     </>
   );
 }
