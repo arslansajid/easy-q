@@ -40,6 +40,7 @@ const buyers = [
 ]
 
 const Events = (props) => {
+    window.scrollTo(0,0);
     document.documentElement.classList.remove("nav-open");
 
     const [activeTab, setActiveTab] = React.useState("1");
