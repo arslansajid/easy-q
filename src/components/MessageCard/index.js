@@ -6,7 +6,7 @@ const MessageCard = (props) => {
     const { name, message, time } = props;
     return (
         <Card className="message-card">
-            <Container className="py-3">
+            {/* <Container className="py-3">
                 <Row>
                     <Col className="col-3 py-2">
                         <Avatar
@@ -22,7 +22,20 @@ const MessageCard = (props) => {
                         </div>
                     </Col>
                 </Row>
-            </Container>
+            </Container> */}
+            <div className="d-flex p-3 align-items-center">
+                <Avatar
+                    className="message-avatar"
+                    name={name}
+                />
+                <div className="d-flex flex-column justify-content-between">
+                    <p className="text-black">{message}</p>
+                    <div className="d-flex">
+                        <p className="mr-2">Received at:</p>
+                        <p className="text-black">{time}</p>
+                    </div>
+                </div>
+            </div>
         </Card>
     )
 }

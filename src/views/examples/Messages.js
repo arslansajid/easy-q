@@ -17,7 +17,7 @@ const messages = [
         name: "Wasim Akram",
         email: "asd@email.com",
         address: "Location: Shop # 218, Giga Mall, Islamabad, Pakistan.",
-        message: "Hi! What is the timing for this event?",
+        message: "Hi! What is the update??",
         time: "Mon, 07:24 am"
     },
     {
