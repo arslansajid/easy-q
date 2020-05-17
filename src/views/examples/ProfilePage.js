@@ -19,18 +19,25 @@ import {
 } from "reactstrap";
 
 // core components
+import ImagePicker from "../../components/ImagePicker";
 
 function ProfilePage(props) {
   const [showModal, setShowModal] = React.useState(false);
+  const [image, setImage] = React.useState([]);
 
-  window.scrollTo(0,0);
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
+    window.scrollTo(0,0);
     document.body.classList.add("landing-page");
     return function cleanup() {
       document.body.classList.remove("landing-page");
     };
-  });
+  }, []);
+
+  const setImageCallback = (value) => {
+		setImage(value);
+  }
+  
   return (
     <>
       <div className="section blue-bg">
@@ -86,6 +93,10 @@ function ProfilePage(props) {
             <Form className="user-form">
                   <Row>
                     <Col className="my-2" md="12">
+                      <label>Profile Photo</label>
+                      <ImagePicker image={image} setImage={setImageCallback} />
+                    </Col>
+                    <Col className="my-2" md="12">
                       <label>Name</label>
                       <InputGroup>
                         <InputGroupAddon addonType="prepend">
@@ -115,7 +126,7 @@ function ProfilePage(props) {
                             <i className="fa fa-home" />
                           </InputGroupText>
                         </InputGroupAddon>
-                        <Input placeholder="Email" type="text" />
+                        <Input placeholder="Address" type="text" />
                       </InputGroup>
                     </Col>
                     <Col className="my-2" md="12">
@@ -126,7 +137,7 @@ function ProfilePage(props) {
                             <i className="fa fa-phone" />
                           </InputGroupText>
                         </InputGroupAddon>
-                        <Input placeholder="Email" type="number" />
+                        <Input placeholder="Phone" type="number" />
                       </InputGroup>
                     </Col>
                   </Row>
