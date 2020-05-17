@@ -70,7 +70,8 @@ class App extends React.Component {
           />
           <Route
             path="/messages"
-            render={props => <Messages {...props} />}
+            // render={props => <Messages {...props} />}
+            render={props => <Inbox {...props} />}
           />
           <Route
             path="/buyers"
