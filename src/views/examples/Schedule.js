@@ -3,8 +3,14 @@ import { Container, Row, Col } from "reactstrap";
 import BookingCard from "../../components/BookingCard";
 
 const Schedule = (props) => {
-    window.scrollTo(0,0);
     document.documentElement.classList.remove("nav-open");
+    React.useEffect(() => {
+        window.scrollTo(0,0);
+        document.body.classList.add("landing-page");
+        return function cleanup() {
+          document.body.classList.remove("landing-page");
+        };
+      }, []);
     const count = 3;
     return (
         <div className="section blue-bg">

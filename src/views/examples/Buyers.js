@@ -29,11 +29,18 @@ const buyers = [
     },
 ]
 const Buyers = (props) => {
-    window.scrollTo(0,0);
     document.documentElement.classList.remove("nav-open");
     const [open, setOpen] = React.useState(false);
     const [isDatePickerOpen, setIsDatePickerOpen] = React.useState(false);
     const [message, setMessage] = React.useState("");
+
+    React.useEffect(() => {
+        window.scrollTo(0,0);
+        document.body.classList.add("landing-page");
+        return function cleanup() {
+          document.body.classList.remove("landing-page");
+        };
+      }, []);
 
     const handleClick = (value) => {
         setMessage(value);

@@ -40,11 +40,18 @@ const buyers = [
 ]
 
 const Events = (props) => {
-    window.scrollTo(0,0);
     document.documentElement.classList.remove("nav-open");
 
     const [activeTab, setActiveTab] = React.useState("1");
     const [showScanner, setShowScanner] = React.useState(false);
+
+    React.useEffect(() => {
+        window.scrollTo(0,0);
+        document.body.classList.add("landing-page");
+        return function cleanup() {
+          document.body.classList.remove("landing-page");
+        };
+      }, []);
 
     const toggle = tab => {
         if (activeTab !== tab) {

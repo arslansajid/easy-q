@@ -20,14 +20,14 @@ import LandingPageHeader from "components/Headers/LandingPageHeader.js";
 import Footer from "components/Footers/Footer";
 
 const LandingPage = () => {
-  window.scrollTo(0,0);
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
+    window.scrollTo(0,0);
     document.body.classList.add("profile-page");
     return function cleanup() {
       document.body.classList.remove("profile-page");
     };
-  });
+  }, []);
   return (
     <>
       <LandingPageHeader />
