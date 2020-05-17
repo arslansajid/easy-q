@@ -59,6 +59,11 @@
     object-fit: contain;
 }
 
+.message-avatar {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
 @media (max-width: 767px){
     .user-card .images-container {
         display: flex;

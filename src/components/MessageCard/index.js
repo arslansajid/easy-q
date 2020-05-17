@@ -1,16 +1,25 @@
 import React from "react";
-import { Container, Row, Col, Card, Alert } from "reactstrap";
+import { Container, Row, Col, Card } from "reactstrap";
+import Avatar from 'react-avatar';
 
-const MessageCard = () => {
+const MessageCard = (props) => {
+    const { name, message, time } = props;
     return (
         <Card className="message-card">
-            <Container>
+            <Container className="py-3">
                 <Row>
-                    <Col lg="6" md="6" className="py-2">
-                        <h3>Message</h3>
-                        <p>Lorem ipsum data</p>
-                        <p>Lorem ipsum data</p>
-                        <p>Lorem ipsum data</p>
+                    <Col className="col-3 py-2">
+                        <Avatar
+                            className="message-avatar"
+                            name={name}
+                        />
+                    </Col>
+                    <Col className="col-9 py-2 d-flex flex-column justify-content-between">
+                        <p className="text-black">{message}</p>
+                        <div className="d-flex">
+                            <p className="mr-2">Received at:</p>
+                            <p className="text-black">{time}</p>
+                        </div>
                     </Col>
                 </Row>
             </Container>
