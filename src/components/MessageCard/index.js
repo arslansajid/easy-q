@@ -6,15 +6,15 @@ const MessageCard = (props) => {
     const { name, message, time } = props;
     return (
         <Card className="message-card">
-            {/* <Container className="py-3">
-                <Row>
-                    <Col className="col-3 py-2">
+            <Container className="py-3">
+                <Row className="py-2">
+                    <Col className="col-4 col-lg-3 col-md-3 col-sm-3">
                         <Avatar
                             className="message-avatar"
                             name={name}
                         />
                     </Col>
-                    <Col className="col-9 py-2 d-flex flex-column justify-content-between">
+                    <Col className="col-8 col-lg-9 col-md-9 col-sm-9 d-flex flex-column justify-content-between">
                         <p className="text-black">{message}</p>
                         <div className="d-flex">
                             <p className="mr-2">Received at:</p>
@@ -22,8 +22,8 @@ const MessageCard = (props) => {
                         </div>
                     </Col>
                 </Row>
-            </Container> */}
-            <div className="d-flex p-3 align-items-center">
+            </Container>
+            {/* <div className="d-flex p-3 align-items-center">
                 <Avatar
                     className="message-avatar"
                     name={name}
@@ -35,7 +35,7 @@ const MessageCard = (props) => {
                         <p className="text-black">{time}</p>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </Card>
     )
 }
