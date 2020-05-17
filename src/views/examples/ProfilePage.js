@@ -46,7 +46,7 @@ function ProfilePage(props) {
             </Col>
             </Row>
             <Row className="py-5">
-            <Col className="py-5" lg="4">
+            <Col lg="4" md="4" sm="4">
               <div className="owner">
                 <div className="avatar">
                   <img
@@ -63,7 +63,7 @@ function ProfilePage(props) {
                 </div>
               </div>
             </Col>
-            <Col className="text-white" lg="8">
+            <Col className="text-white user-data" lg="8" md="8" sm="8">
               <h5 className="mb-3">ID: {"123123"}</h5>
               <h3 className="mb-3">Name: {"Shahid Afridi"}</h3>
               <h4 className="mb-3">Email: {"shahid.afridi@email.com"}</h4>

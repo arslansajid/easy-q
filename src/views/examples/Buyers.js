@@ -66,7 +66,7 @@ const Buyers = (props) => {
                         </div>
                         <h1 className="py-3 text-white">Buyers</h1>
                     </Col>
-                    <Col className="ml-auto mr-auto" lg="6">
+                    <Col className="ml-auto mr-auto py-5" lg="6">
                         {buyers.map((buyer, index) => {
                             return (
                                 <div key={index}>

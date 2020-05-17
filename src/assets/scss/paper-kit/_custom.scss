@@ -72,3 +72,10 @@
         margin-bottom: 20px;
     }
 }
+
+@media (max-width: 575px){
+    .user-data {
+        margin-top: 25px;
+        text-align: center;
+    }
+}

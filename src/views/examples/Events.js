@@ -65,8 +65,8 @@ const Events = (props) => {
                         <h1 className="py-3 text-white">Events</h1>
 
                     </Col>
-                    <Col className="ml-auto mr-auto" lg="6">
-                        <Button onClick={() => setShowScanner(true)} className="w-100 mb-5" color="danger" size="lg">SCAN</Button>
+                    <Col className="ml-auto mr-auto py-5" lg="6">
+                        <Button onClick={() => setShowScanner(true)} className="w-100" color="danger" size="lg">SCAN</Button>
                     </Col>
                     <Col lg="12">
                         <div className="nav-tabs-navigation">

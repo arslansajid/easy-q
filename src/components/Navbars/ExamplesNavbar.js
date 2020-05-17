@@ -95,11 +95,11 @@ function ExamplesNavbar() {
               Events
               </NavLink>
             </NavItem>
-            <NavItem>
+            {/* <NavItem>
               <NavLink to="/schedule" tag={Link}>
               Schedule
               </NavLink>
-            </NavItem>
+            </NavItem> */}
             <NavItem>
               <NavLink to="/messages" tag={Link}>
               Messages
