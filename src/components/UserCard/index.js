@@ -15,9 +15,9 @@ const UserCard = (props) => {
                     </Col>
                     <Col lg="8" md="9">
                         <h5 className="mb-2">{userId}</h5>
-                        <h3 className="mb-2">{name}</h3>
-                        <h4 className="mb-2">{email}</h4>
-                        <h4 className="mb-2">{phone}</h4>
+                        <h4 className="mb-2">{name}</h4>
+                        <h5 className="mb-2">{email}</h5>
+                        <h5 className="mb-2">{phone}</h5>
                         <h5 className="mb-2">{address}</h5>
                         {!hideButtons && (
                         <div className="d-flex justify-content-between align-items-center mt-3">

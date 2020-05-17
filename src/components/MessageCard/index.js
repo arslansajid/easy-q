@@ -15,10 +15,10 @@ const MessageCard = (props) => {
                         />
                     </Col>
                     <Col className="col-8 col-lg-9 col-md-9 col-sm-9 d-flex flex-column justify-content-between">
-                        <p className="text-black">{message}</p>
+                        <h5 className="text-black">{message}</h5>
                         <div className="d-flex">
-                            <p className="mr-2">Received at:</p>
-                            <p className="text-black">{time}</p>
+                            <h5 className="mr-2">Received at:</h5>
+                            <h5 className="text-black">{time}</h5>
                         </div>
                     </Col>
                 </Row>

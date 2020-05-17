@@ -35,11 +35,11 @@
     cursor: pointer;
 }
 
-.vertical-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+// .vertical-center {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
 
 .booking-card img {
     max-width: 100%;
@@ -78,5 +78,10 @@
     .user-data {
         margin-top: 25px;
         text-align: center;
+    }
+    .booking-card .vertical-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
