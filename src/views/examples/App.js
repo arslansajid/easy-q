@@ -9,7 +9,8 @@ import LandingPage from "./LandingPage";
 import ProfilePage from "./ProfilePage";
 import Bookings from "./Bookings";
 import Events from "./Events";
-import Schedule from "./Schedule";
+// import Schedule from "./Schedule";
+import Inbox from "./Inbox";
 import Messages from "./Messages";
 import Buyers from "./Buyers";
 import PageNotFound from "./PageNotFound";
@@ -59,9 +60,13 @@ class App extends React.Component {
             path="/events"
             render={props => <Events {...props} />}
           />
-          <Route
+          {/* <Route
             path="/schedule"
             render={props => <Schedule {...props} />}
+          /> */}
+          <Route
+            path="/inbox"
+            render={props => <Inbox {...props} />}
           />
           <Route
             path="/messages"
