@@ -24,7 +24,8 @@
     "react-router-dom": "5.0.1",
     "react-scripts": "3.0.1",
     "reactstrap": "8.0.0",
-    "styled-components": "^5.1.0"
+    "styled-components": "^5.1.0",
+    "sweetalert2": "^9.10.13"
   },
   "scripts": {
     "start": "react-scripts start",
