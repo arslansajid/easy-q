@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Container, Row, Col } from "reactstrap";
 import MessageCard from "../../components/MessageCard";
 import Chat from "../../components/Chat";
-import Chat2 from "../../components/Chat2";
 import { toggleWidget } from 'react-chat-widget';
 
 const messages = [
@@ -92,9 +91,6 @@ const Messages = (props) => {
                     />
                 )
             }
-            {/* <Chat2
-                chatUser={chatUser}
-            /> */}
         </div>
     )
 }
