@@ -169,3 +169,10 @@
     padding: 15px !important;
     z-index: 999;
 }
+
+.mobile-chat-close {
+    position: absolute;
+    z-index: 9999;
+    top: 10px;
+    right: 10px;
+}

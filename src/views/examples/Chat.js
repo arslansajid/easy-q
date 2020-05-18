@@ -16,7 +16,7 @@ const Chat = (props) => {
         <div className="blue-bg">
             <Container className="py-5">
                 <Row>
-                    <Button color="danger" size="sm" style={{ zIndex: 9999, marginLeft: "10px" }} onClick={() => props.history.goBack()}>
+                    <Button className="mobile-chat-close" color="danger" size="sm" onClick={() => props.history.goBack()}>
                         Close
                     </Button>
                     <Col lg="12 d-flex align-items-center">
