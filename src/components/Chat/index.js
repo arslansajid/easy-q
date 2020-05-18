@@ -10,9 +10,11 @@ function App(props) {
     //     toggleWidget()
     //   }
     addResponseMessage(`Welcome to this awesome chat ${!!user && user.name }!`);
-    return function cleanup() {
-      toggleWidget()
-    };
+    if(parent === "mobile") {
+        return function cleanup() {
+            toggleWidget()
+          };
+      }
   }, [props]);
 
   const handleNewUserMessage = (newMessage) => {
