@@ -80,7 +80,7 @@ function ExamplesNavbar() {
           isOpen={navbarCollapse}
         >
           <Nav navbar>
-          <NavItem className="d-lg-none d-md-none d-block">
+            <NavItem className="d-lg-none d-md-none d-block">
               <NavLink to="/" tag={Link}>
                 Home
               </NavLink>
@@ -92,7 +92,7 @@ function ExamplesNavbar() {
             </NavItem>
             <NavItem>
               <NavLink to="/events" tag={Link}>
-              Events
+                Events
               </NavLink>
             </NavItem>
             {/* <NavItem>
@@ -102,17 +102,17 @@ function ExamplesNavbar() {
             </NavItem> */}
             <NavItem>
               <NavLink to="/messages" tag={Link}>
-              Messages
+                Messages
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink to="/profile" tag={Link}>
-              Profile
+                Profile
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink to="/logout" tag={Link}>
-              Log Out
+                Log Out
               </NavLink>
             </NavItem>
           </Nav>

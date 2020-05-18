@@ -11,6 +11,7 @@ import Bookings from "./Bookings";
 import Events from "./Events";
 // import Schedule from "./Schedule";
 import Inbox from "./Inbox";
+import Chat from "./Chat";
 import Messages from "./Messages";
 import Buyers from "./Buyers";
 import PageNotFound from "./PageNotFound";
@@ -69,9 +70,12 @@ class App extends React.Component {
             render={props => <Inbox {...props} />}
           />
           <Route
+            path="/chat"
+            render={props => <Chat {...props} />}
+          />
+          <Route
             path="/messages"
-            // render={props => <Messages {...props} />}
-            render={props => <Inbox {...props} />}
+            render={props => <Messages {...props} />}
           />
           <Route
             path="/buyers"

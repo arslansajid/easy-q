@@ -100,6 +100,18 @@
         width: 100%;
         display: block !important;
     }
+    .rcw-widget-container {
+        margin: 0px !important;
+        height: 85vh !important;
+    }
+    
+}
+
+.message-card {
+    background: white;
+    box-shadow: 0 1px 13px rgba(0, 0, 0, 0.14), 0 0 0 1px rgba(115, 71, 38, 0.23);
+    border-radius: 12px;
+    margin-bottom: 20px;
 }
 
 .inbox {
@@ -128,4 +140,32 @@
     height: 1px;
     background: #222;
     margin: 10px 0 10px;
+}
+
+.rcw-launcher {
+    display: none;
+}
+
+// .rcw-widget-container {
+//     margin: 0 10px 10px 0 !important;
+// }
+
+.rcw-close-button {
+    background-color: #35cce6;
+    border: 0;
+    display: block !important;
+    position: absolute;
+    right: 5px;
+    top: 15px;
+    width: 35px
+}
+
+.rcw-close {
+    width: 20px;
+    height: 20px
+}
+
+.rcw-header {
+    padding: 15px !important;
+    z-index: 999;
 }

@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col } from "reactstrap";
 import MessageCard from "../../components/MessageCard";
+import Chat from "../../components/Chat";
+import Chat2 from "../../components/Chat2";
+import { toggleWidget } from 'react-chat-widget';
 
 const messages = [
     {
@@ -33,13 +36,25 @@ const messages = [
 
 const Messages = (props) => {
     document.documentElement.classList.remove("nav-open");
+    const [chatUser, setchatUser] = useState(null);
+
     React.useEffect(() => {
-        window.scrollTo(0,0);
+        window.scrollTo(0, 0);
         document.body.classList.add("landing-page");
         return function cleanup() {
-          document.body.classList.remove("landing-page");
+            document.body.classList.remove("landing-page");
         };
-      }, []);
+    }, []);
+
+    const toggleChatWidget = (value) => {
+        console.log("###### toggleChatWidget")
+        // if (chatUser === value) {
+            toggleWidget();
+        // }
+        setchatUser(value);
+    }
+
+    const isMobile = window.screen.width < 500;
 
     return (
         <div className="section blue-bg">
@@ -58,9 +73,11 @@ const Messages = (props) => {
                             return (
                                 <div key={index}>
                                     <MessageCard
+                                        msg={msg}
                                         name={msg.name}
                                         message={msg.message}
                                         time={msg.time}
+                                        toggleChatWidget={toggleChatWidget}
                                     />
                                 </div>
                             )
@@ -68,6 +85,16 @@ const Messages = (props) => {
                     </Col>
                 </Row>
             </Container>
+            {
+                chatUser && !isMobile && (
+                    <Chat
+                        user={chatUser}
+                    />
+                )
+            }
+            {/* <Chat2
+                chatUser={chatUser}
+            /> */}
         </div>
     )
 }

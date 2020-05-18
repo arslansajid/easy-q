@@ -20,31 +20,31 @@ const UserCard = (props) => {
                         <h5 className="mb-2">{phone}</h5>
                         <h5 className="mb-2">{address}</h5>
                         {!hideButtons && (
-                        <div className="d-flex justify-content-between align-items-center mt-3">
-                            {/* <img src={require("../../assets/img/qr.png")} alt="qr-img" /> */}
-                            {/* <h5>QR: {qrCode}</h5> */}
-                            <Button
-                                color="success"
-                                size="sm"
-                                onClick={() => handleClick("Reschedule")}
-                            >
-                                Reschedule
+                            <div className="d-flex justify-content-between align-items-center mt-3">
+                                {/* <img src={require("../../assets/img/qr.png")} alt="qr-img" /> */}
+                                {/* <h5>QR: {qrCode}</h5> */}
+                                <Button
+                                    color="success"
+                                    size="sm"
+                                    onClick={() => handleClick("Reschedule")}
+                                >
+                                    Reschedule
                             </Button>
-                            <Button
-                                color="danger"
-                                size="sm"
-                                onClick={() => handleClick("Cancel")}
-                            >
-                                Cancel
+                                <Button
+                                    color="danger"
+                                    size="sm"
+                                    onClick={() => handleClick("Cancel")}
+                                >
+                                    Cancel
                             </Button>
-                            <Button
-                                color="info"
-                                size="sm"
-                                onClick={() => handleClick("Postpone")}
-                            >
-                                Postpone
+                                <Button
+                                    color="info"
+                                    size="sm"
+                                    onClick={() => handleClick("Postpone")}
+                                >
+                                    Postpone
                             </Button>
-                        </div>
+                            </div>
                         )}
                     </Col>
                 </Row>
