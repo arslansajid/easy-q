@@ -14,7 +14,10 @@
     -webkit-transition: all 0.4s;
     padding: 0;
     // background: $white-color;
-    background: #172a53;
+    // background: #172a53;
+    background: #00f260;
+    background: -webkit-linear-gradient(to left, #00f260, #0575e6);
+    background: linear-gradient(to left, #00f260, #0575e6);
     box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15);
 
     .navbar-brand {
@@ -36,7 +39,8 @@
     &:not([class*="bg"]) {
       .navbar-toggler {
         .navbar-toggler-bar {
-          background: $default-color !important;
+          // background: $default-color !important;
+          background: white !important;
         }
       }
     }
