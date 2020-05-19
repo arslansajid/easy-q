@@ -87,17 +87,17 @@ function ExamplesNavbar(props) {
             isOpen={navbarCollapse}
           >
             <Nav navbar>
-              <NavItem onClick={() => setNavbarCollapse(!navbarCollapse)} className="d-lg-none d-md-none d-block">
+              <NavItem className="d-lg-none d-md-none d-block">
                 <NavLink to="/" tag={Link}>
                   Home
               </NavLink>
               </NavItem>
-              <NavItem onClick={() => setNavbarCollapse(!navbarCollapse)}>
+              <NavItem>
                 <NavLink to="/my-store" tag={Link}>
                   My Store
               </NavLink>
               </NavItem>
-              <NavItem onClick={() => setNavbarCollapse(!navbarCollapse)}>
+              <NavItem>
                 <NavLink to="/events" tag={Link}>
                   Events
               </NavLink>
@@ -107,12 +107,12 @@ function ExamplesNavbar(props) {
               Schedule
               </NavLink>
             </NavItem> */}
-              <NavItem onClick={() => setNavbarCollapse(!navbarCollapse)}>
+              <NavItem>
                 <NavLink to="/messages" tag={Link}>
                   Messages
               </NavLink>
               </NavItem>
-              <NavItem onClick={() => setNavbarCollapse(!navbarCollapse)}>
+              <NavItem>
                 <NavLink to="/profile" tag={Link}>
                   Profile
               </NavLink>
