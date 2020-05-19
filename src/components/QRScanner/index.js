@@ -11,6 +11,10 @@ class QRScanner extends Component {
             this.setState({
                 result: data
             })
+            if(!!this.props.setResult) {
+                this.props.setResult(data);
+                this.props.showSuccess(true);
+            }
         }
     }
     handleError = err => {
@@ -25,7 +29,7 @@ class QRScanner extends Component {
                     onScan={this.handleScan}
                     style={{ width: "350px", maxHeight: "350px" }}
                 />
-                <p>{this.state.result}</p>
+                {/* <p>{this.state.result}</p> */}
             </div>
         )
     }

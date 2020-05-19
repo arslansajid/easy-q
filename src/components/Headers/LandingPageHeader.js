@@ -16,6 +16,8 @@ import QRScanner from "../../components/QRScanner";
 
 function LandingPageHeader() {
   const [showScanner, setShowScanner] = React.useState(false);
+  const [showResultModal, setShowResultModal] = React.useState(false);
+  const [result, setResult] = React.useState(false);
   let pageHeader = React.createRef();
 
   React.useEffect(() => {
@@ -72,11 +74,28 @@ function LandingPageHeader() {
             isOpen={showScanner} toggle={() => setShowScanner(!showScanner)}>
             <ModalHeader className="text-black">SCAN QR</ModalHeader>
             <ModalBody className="d-flex justify-content-center align-items-center">
-              <QRScanner />
+              <QRScanner setResult={setResult} showSuccess={setShowResultModal} />
             </ModalBody>
             <ModalFooter className="p-2">
               <Button color="success" onClick={() => setShowScanner(false)} size="large" className="">Next</Button>
               <Button color="danger" onClick={() => setShowScanner(false)} size="large" className="">Cancel</Button>
+            </ModalFooter>
+          </Modal>
+        )}
+        {
+        showResultModal && (
+          <Modal
+            size={"lg"}
+            fade={false}
+            backdrop={"static"}
+            isOpen={showResultModal} toggle={() => setShowResultModal(!showResultModal)}>
+            <ModalHeader className="text-black">SCAN QR</ModalHeader>
+            <ModalBody className="d-flex justify-content-center align-items-center">
+              <h3 className="text-black">Scan Successfull!</h3>
+              <h4>{result}</h4>
+            </ModalBody>
+            <ModalFooter className="p-2">
+              <Button color="danger" onClick={() => setShowResultModal(false)} size="large" className="">Close</Button>
             </ModalFooter>
           </Modal>
         )}

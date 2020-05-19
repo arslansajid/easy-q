@@ -44,14 +44,16 @@ const Events = (props) => {
 
     const [activeTab, setActiveTab] = React.useState("1");
     const [showScanner, setShowScanner] = React.useState(false);
+    const [showResultModal, setShowResultModal] = React.useState(false);
+    const [result, setResult] = React.useState(false);
 
     React.useEffect(() => {
-        window.scrollTo(0,0);
+        window.scrollTo(0, 0);
         document.body.classList.add("landing-page");
         return function cleanup() {
-          document.body.classList.remove("landing-page");
+            document.body.classList.remove("landing-page");
         };
-      }, []);
+    }, []);
 
     const toggle = tab => {
         if (activeTab !== tab) {
@@ -172,11 +174,29 @@ const Events = (props) => {
                         isOpen={showScanner} toggle={() => setShowScanner(!showScanner)}>
                         <ModalHeader className="text-black">SCAN QR</ModalHeader>
                         <ModalBody className="d-flex justify-content-center align-items-center">
-                            <QRScanner />
+                            <QRScanner setResult={setResult} showSuccess={setShowResultModal} />
                         </ModalBody>
                         <ModalFooter className="p-2">
                             <Button color="success" onClick={() => setShowScanner(false)} size="large" className="">Next</Button>
                             <Button color="danger" onClick={() => setShowScanner(false)} size="large" className="">Cancel</Button>
+                        </ModalFooter>
+                    </Modal>
+                )}
+
+            {
+                showResultModal && (
+                    <Modal
+                        size={"lg"}
+                        fade={false}
+                        backdrop={"static"}
+                        isOpen={showResultModal} toggle={() => setShowResultModal(!showResultModal)}>
+                        <ModalHeader className="text-black">SCAN QR</ModalHeader>
+                        <ModalBody className="d-flex justify-content-center align-items-center flex-column">
+                            <h3 className="text-black">Scan Successfull!</h3>
+                            <h4>{result}</h4>
+                        </ModalBody>
+                        <ModalFooter className="p-2">
+                            <Button color="danger" onClick={() => setShowResultModal(false)} size="large" className="">Close</Button>
                         </ModalFooter>
                     </Modal>
                 )}
