@@ -65,7 +65,8 @@ function ExamplesNavbar(props) {
               title="EASY-Q Home"
               tag={Link}
             >
-              <img className="logo" src={require("../../assets/img/ELogo1024.png")} />
+              {/* <img className="logo" src={require("../../assets/img/ELogo1024.png")} /> */}
+              <img className="logo" src={require("../../assets/img/ELogo/500w/Elogo-500.png")} />
             EASY-Q
           </NavbarBrand>
             <button

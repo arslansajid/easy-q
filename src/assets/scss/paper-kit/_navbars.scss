@@ -13,7 +13,8 @@
     transition: all 0.4s;
     -webkit-transition: all 0.4s;
     padding: 0;
-    background: $white-color;
+    // background: $white-color;
+    background: #172a53;
     box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15);
 
     .navbar-brand {
@@ -21,7 +22,8 @@
         margin: $navbar-margin-brand;
         padding: $navbar-padding-brand;
         font-size: $font-size-base;
-        color: $default-color;
+        // color: $default-color;
+        color: white;
         text-transform: uppercase;
     }
     .navbar-toggler:focus {
@@ -48,7 +50,7 @@
             font-size: $font-size-small;
             text-transform: uppercase;
             font-weight: 600;
-            color: $default-color;
+            color: white;
 
             p {
               margin: 0px 0px;
@@ -240,7 +242,7 @@
         .open .nav-link:hover,
         .open .nav-link:focus {
             background-color: transparent;
-            color: $default-color;
+            color: white;
             @include opacity(1);
         }
     }
