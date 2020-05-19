@@ -51,7 +51,7 @@ function ExamplesNavbar(props) {
   if (hideHeader) {
     return null;
   } else {
-    return (
+    return ( 
       <Navbar
         className={classnames("fixed-top", navbarColor)}
         color-on-scroll="300"
