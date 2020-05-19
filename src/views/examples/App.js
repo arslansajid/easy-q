@@ -54,7 +54,7 @@ class App extends React.Component {
             render={props => <ProfilePage {...props} />}
           />
           <Route
-            path="/bookings"
+            path="/my-store"
             render={props => <Bookings {...props} />}
           />
           <Route

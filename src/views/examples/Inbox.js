@@ -143,7 +143,7 @@ const Inbox = (props) => {
                                 className="fa fa-2x fa-arrow-left text-white mr-3"
                             />
                         </div>
-                        <h1 className="py-3 text-white">Inbox</h1>
+                        <h2 className="py-3 text-white">Inbox</h2>
                     </Col>
                     <Col className="ml-auto mr-auto py-5 text-black inbox" lg="12">
                         <Row>

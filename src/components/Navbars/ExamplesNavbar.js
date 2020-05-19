@@ -93,8 +93,8 @@ function ExamplesNavbar(props) {
               </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink to="/bookings" tag={Link}>
-                  Bookings
+                <NavLink to="/my-store" tag={Link}>
+                  My Store
               </NavLink>
               </NavItem>
               <NavItem>

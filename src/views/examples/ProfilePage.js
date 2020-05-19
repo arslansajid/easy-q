@@ -49,7 +49,7 @@ function ProfilePage(props) {
                   className="fa fa-2x fa-arrow-left text-white mr-3"
                 />
               </div>
-              <h1 className="py-3 text-white">Profile</h1>
+              <h2 className="py-3 text-white">Profile</h2>
             </Col>
             </Row>
             <Row className="py-5">

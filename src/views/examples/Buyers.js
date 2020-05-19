@@ -71,7 +71,7 @@ const Buyers = (props) => {
                                 className="fa fa-2x fa-arrow-left text-white mr-3"
                             />
                         </div>
-                        <h1 className="py-3 text-white">Buyers</h1>
+                        <h2 className="py-3 text-white">Buyers</h2>
                     </Col>
                     <Col className="ml-auto mr-auto py-5" lg="6">
                         {buyers.map((buyer, index) => {

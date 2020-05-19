@@ -69,7 +69,7 @@ const Events = (props) => {
                                 className="fa fa-2x fa-arrow-left text-white mr-3"
                             />
                         </div>
-                        <h1 className="py-3 text-white">Events</h1>
+                        <h2 className="py-3 text-white">Events</h2>
 
                     </Col>
                     <Col className="ml-auto mr-auto py-5" lg="6">

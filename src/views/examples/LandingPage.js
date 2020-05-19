@@ -86,7 +86,7 @@ const LandingPage = () => {
                   />
                   <Row>
                     <Col className="ml-auto mr-auto" md="4">
-                      <Button className="btn-fill" color="info" size="lg">
+                      <Button className="btn-fill" color="danger" size="lg">
                         Send Message
                       </Button>
                     </Col>
