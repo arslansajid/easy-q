@@ -1,6 +1,9 @@
 import React from "react";
-import { Container, Row, Col } from "reactstrap";
+import { Container, Row, Col, Button } from "reactstrap";
 import BookingCard from "../../components/BookingCard";
+import DatePicker from "../../components/Pickers"
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
 
 const shops = [
     {
@@ -25,6 +28,31 @@ const shops = [
 
 const Bookings = (props) => {
     document.documentElement.classList.remove("nav-open");
+    const [isDatePickerOpen, setIsDatePickerOpen] = React.useState(false);
+    const [statusEl, setStatusEl] = React.useState(null);
+    const [typeEl, setTypeEl] = React.useState(null);
+
+    const onDatePickerClose = () => {
+        setIsDatePickerOpen(false);
+        console.log("onDatePickerClose")
+    }
+
+    const handleStatusClick = (event) => {
+        setStatusEl(event.currentTarget);
+    };
+
+    const handleStatusClose = () => {
+        setStatusEl(null);
+    };
+
+    const handleTypeClick = (event) => {
+        setTypeEl(event.currentTarget);
+    };
+
+    const handleTypeClose = () => {
+        setTypeEl(null);
+    };
+
     return (
         <div className="section blue-bg">
             <Container className="py-5">
@@ -35,7 +63,47 @@ const Bookings = (props) => {
                                 className="fa fa-2x fa-arrow-left text-white mr-3"
                             />
                         </div>
-                        <h1 className="py-3 text-white">Bookings</h1>
+                        <h2 className="py-3 text-white">My Store</h2>
+                    </Col>
+                    <Col lg="12" className="ml-auto mr-auto d-flex align-items-center justify-content-center mt-3">
+                                <Button className="mr-2" color="danger" onClick={() => setIsDatePickerOpen(true)}>Select Date</Button>
+                                <DatePicker
+                                    isOpen={isDatePickerOpen}
+                                    setIsOpen={setIsDatePickerOpen}
+                                    onDatePickerClose={onDatePickerClose}
+                                />
+
+                                <Button className="mr-2" color="danger" onClick={handleStatusClick}>
+                                    Filter By Status
+                                </Button>
+                                <Menu
+                                    id="status-menu"
+                                    anchorEl={statusEl}
+                                    keepMounted
+                                    open={Boolean(statusEl)}
+                                    onClose={handleStatusClose}
+                                >
+                                    <MenuItem onClick={handleStatusClose}>Booked</MenuItem>
+                                    <MenuItem onClick={handleStatusClose}>Attended</MenuItem>
+                                    <MenuItem onClick={handleStatusClose}>Cancelled</MenuItem>
+                                </Menu>
+
+                                <Button color="danger" onClick={handleTypeClick}>
+                                    Filter By Status
+                                </Button>
+                                <Menu
+                                    id="type-menu"
+                                    anchorEl={typeEl}
+                                    keepMounted
+                                    open={Boolean(typeEl)}
+                                    onClose={handleTypeClose}
+                                >
+                                    <MenuItem onClick={handleTypeClose}>Super Market</MenuItem>
+                                    <MenuItem onClick={handleTypeClose}>Wholesalers/Department Stores</MenuItem>
+                                    <MenuItem onClick={handleTypeClose}>Liquor Stores</MenuItem>
+                                    <MenuItem onClick={handleTypeClose}>Clothing Stores</MenuItem>
+                                    <MenuItem onClick={handleTypeClose}>Restuarants</MenuItem>
+                                </Menu>
                     </Col>
                     <Col className="ml-auto mr-auto py-5" lg="6">
                         {shops.map((shop, index) => {
