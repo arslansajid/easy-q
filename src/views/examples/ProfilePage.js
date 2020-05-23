@@ -17,6 +17,7 @@ import {
   InputGroupText,
   InputGroup,
 } from "reactstrap";
+import TextField from '@material-ui/core/TextField';
 
 // core components
 import ImagePicker from "../../components/ImagePicker";
@@ -140,6 +141,118 @@ function ProfilePage(props) {
                         <Input placeholder="Phone" type="number" />
                       </InputGroup>
                     </Col>
+                    <Col className="my-2" md="12">
+                        {/* <label>Opening Time</label> */}
+                        {/* <Input placeholder="Quantity" type="text" /> */}
+                        <div className="my-2">
+                          Regular days
+                        </div>
+                        <TextField
+                          id="time"
+                          label="Opening Time"
+                          type="time"
+                          defaultValue="07:30"
+                          // className={classes.textField}
+                          className={"mr-3"}
+                          InputLabelProps={{
+                            // shrink: true,
+                          }}
+                          inputProps={{
+                            step: 600, // 10 min
+                          }}
+                        />
+                        <TextField
+                          id="time"
+                          label="Closing Time"
+                          type="time"
+                          defaultValue="07:30"
+                          // className={classes.textField}
+                          InputLabelProps={{
+                            // shrink: true,
+                          }}
+                          inputProps={{
+                            step: 600, // 10 min
+                          }}
+                        />
+                      </Col>
+                      <Col className="my-2" md="12">
+                        {/* <label>Opening Time</label> */}
+                        {/* <Input placeholder="Quantity" type="text" /> */}
+                        <div className="my-2">
+                          {"Public Holidays & Weekends"}
+                        </div>
+                        <TextField
+                          id="time"
+                          label="Opening Time"
+                          type="time"
+                          defaultValue="07:30"
+                          // className={classes.textField}
+                          className={"mr-3"}
+                          InputLabelProps={{
+                            // shrink: true,
+                          }}
+                          inputProps={{
+                            step: 600, // 10 min
+                          }}
+                        />
+                        <TextField
+                          id="time"
+                          label="Closing Time"
+                          type="time"
+                          defaultValue="07:30"
+                          // className={classes.textField}
+                          InputLabelProps={{
+                            // shrink: true,
+                          }}
+                          inputProps={{
+                            step: 600, // 10 min
+                          }}
+                        />
+                      </Col>
+                      <Col className="my-2" md="12">
+                        <label>Closing Time</label>
+                        <Input placeholder="Quantity" type="text" />
+                      </Col>
+                    <Col className="my-2" md="12">
+                      <label>Booking Interval</label>
+                      <select
+                          name="timer_type"
+                          // value={sneakers.timer_type}
+                          className="form-control"
+                          // onChange={this.handleInputChange}
+                          required
+                        >
+                          <option value="">Select Booking Interval</option>
+                          <option value="sneakers">10 minutes</option>
+                          <option value="sneakers">20 minutes</option>
+                          <option value="sneakers">30 minutes</option>
+                          <option value="sneakers">40 minutes</option>
+                          <option value="sneakers">50 minutes</option>
+                        </select>
+                      </Col>
+
+                      <Col className="my-2" md="12">
+                        <label>Maximum instore quantity</label>
+                        <Input placeholder="Quantity" type="number" />
+                      </Col>
+
+                      <Col className="my-2" md="12">
+                        <label>Walk In Ratio</label>
+                        <select
+                          name="timer_type"
+                          // value={sneakers.timer_type}
+                          className="form-control"
+                          // onChange={this.handleInputChange}
+                          required
+                        >
+                          <option value="">Select Booking Interval</option>
+                          <option value="sneakers">10 %</option>
+                          <option value="sneakers">20 %</option>
+                          <option value="sneakers">30 %</option>
+                          <option value="sneakers">40 %</option>
+                          <option value="sneakers">50 %</option>
+                        </select>
+                      </Col>
                   </Row>
                 </Form>
             </ModalBody>
