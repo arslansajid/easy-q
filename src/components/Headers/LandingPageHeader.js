@@ -1,8 +1,9 @@
 
-import React from "react";
+import React, { useState } from "react";
 
 // reactstrap components
 import {
+  Input,
   Button,
   Container,
   Modal,
@@ -18,6 +19,8 @@ function LandingPageHeader() {
   const [showScanner, setShowScanner] = React.useState(false);
   const [showResultModal, setShowResultModal] = React.useState(false);
   const [result, setResult] = React.useState(false);
+  const [bookingIdInput, setBookingIdInput] = useState("");
+  const [showBookingIdInput, setShowBookingIdInput] = useState(false);
   let pageHeader = React.createRef();
 
   React.useEffect(() => {
@@ -73,8 +76,21 @@ function LandingPageHeader() {
             backdrop={"static"}
             isOpen={showScanner} toggle={() => setShowScanner(!showScanner)}>
             <ModalHeader className="text-black">SCAN QR</ModalHeader>
-            <ModalBody className="d-flex justify-content-center align-items-center">
+            <ModalBody className="d-flex justify-content-center align-items-center flex-column">
               <QRScanner setResult={setResult} showSuccess={setShowResultModal} />
+              <div className="w-100 text-center">
+                <strong>Can't scan your code?{"   "}</strong>
+                <Button onClick={() => setShowBookingIdInput(true)} className="m-2" outline size="sm" color="danger">Enter Booking ID</Button>
+                {
+                  showBookingIdInput && (
+                    <Input
+                      className=""
+                      placeholder="Booking ID"
+                      type="number"
+                    />
+                  )
+                }
+              </div>
             </ModalBody>
             <ModalFooter className="p-2">
               <Button color="success" onClick={() => setShowScanner(false)} size="large" className="">Next</Button>
