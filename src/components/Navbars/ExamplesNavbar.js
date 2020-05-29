@@ -93,13 +93,18 @@ function ExamplesNavbar(props) {
               </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink to="/my-store" tag={Link}>
+                <NavLink to="/events" tag={Link}>
                   My Store
               </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink to="/events" tag={Link}>
-                  Events
+                <NavLink to="/status" tag={Link}>
+                  Current Status
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink to="/bookings" tag={Link}>
+                  Bookings
               </NavLink>
               </NavItem>
               {/* <NavItem>
