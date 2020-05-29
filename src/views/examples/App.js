@@ -9,7 +9,7 @@ import LandingPage from "./LandingPage";
 import ProfilePage from "./ProfilePage";
 import Bookings from "./Bookings";
 import Events from "./Events";
-// import Schedule from "./Schedule";
+import Status from "./Status";
 import Inbox from "./Inbox";
 import Chat from "./Chat";
 import Messages from "./Messages";
@@ -54,7 +54,11 @@ class App extends React.Component {
             render={props => <ProfilePage {...props} />}
           />
           <Route
-            path="/my-store"
+            path="/status"
+            render={props => <Status {...props} />}
+          />
+          <Route
+            path="/bookings"
             render={props => <Bookings {...props} />}
           />
           <Route
