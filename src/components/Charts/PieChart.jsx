@@ -5,6 +5,7 @@ export default class PieChart extends React.Component {
   componentDidMount() {
     var ctx = document.getElementById("myChart1");
     this.myChart1 = new Chart(ctx, {
+      responsive: true,
       type: 'pie',
       data: {
         labels: ['Sale', 'Rent'],

@@ -44,7 +44,7 @@ const Schedule = (props) => {
                         <Row className="m-5">
                             <Col lg="6" md="6" sm="12">
                                 <h3 className='my-5 text-white text-center'>Events in last week</h3>
-                                <LineChart className='chart' data={[1, 2, 3, 4, 5, 6, 7]} labels={['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']} />
+                                <LineChart className='chart' data={[3, 2, 4, 6, 5, 2, 7]} labels={['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']} />
                             </Col>
                             <Col lg="6" md="6" sm="12">
                                 <h3 className='my-5 text-white text-center'>Walk In Comparison</h3>

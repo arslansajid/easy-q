@@ -5,6 +5,7 @@ export default class ListingChart extends React.Component {
   componentDidMount() {
     var ctx = document.getElementById("myChart2");
     this.myChart = new Chart(ctx, {
+      responsive: true,
       type: 'bar',
       data: {
         labels: this.props.labels,

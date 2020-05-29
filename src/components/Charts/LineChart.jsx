@@ -5,6 +5,7 @@ export default class ListingChart extends React.Component {
   componentDidMount() {
     var ctx = document.getElementById("myChart");
     this.myChart = new Chart(ctx, {
+      responsive: true,
       type: 'line',
       data: {
         labels: this.props.labels,
@@ -34,18 +35,18 @@ export default class ListingChart extends React.Component {
          },
         scales: {
           yAxes: [{
-            display:false,
+            display:true,
             gridLines: {
-              display: false
+              display: true
             },
             ticks: {
-              display: false,
+              display: true,
               maxTicksLimit: 3,
             }
           }],
           xAxes: [{
             gridLines: {
-              display:false
+              display:true
             },
             categoryPercentage: 1.0,
             barPercentage: 0.7,

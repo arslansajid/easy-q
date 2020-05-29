@@ -5,6 +5,7 @@ export default class Doughnut extends React.Component {
   componentDidMount() {
     var ctx = document.getElementById("myChart3");
     this.myChart = new Chart(ctx, {
+      responsive: true,
       type: 'doughnut',
       data: {
         labels: this.props.labels,
