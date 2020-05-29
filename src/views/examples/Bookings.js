@@ -114,7 +114,7 @@ const Bookings = (props) => {
                         </div>
                         <h2 className="py-3 text-white">Bookings</h2>
                     </Col>
-                    <Col lg="12" className="ml-auto mr-auto d-flex align-items-center justify-content-center mt-3">
+                    <Col lg="12" className="ml-auto mr-auto d-flex align-items-center justify-content-center my-5">
                         <SingleDatePicker
                           date={bookingFilterDate} // momentPropTypes.momentObj or null
                           onDateChange={date => setBookingFilterDate(date)} // PropTypes.func.isRequired
@@ -123,6 +123,7 @@ const Bookings = (props) => {
                           id="date-picker" // PropTypes.string.isRequired,
                           displayFormat={"DD-MMM-YYYY"}
                           placeholder="Select date"
+                          numberOfMonths={1}
                         />
                     </Col>
                     <Col lg="12">
