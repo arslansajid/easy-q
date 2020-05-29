@@ -43,21 +43,21 @@ const Schedule = (props) => {
                     <Col lg="12">
                         <Row className="m-5">
                             <Col lg="6" md="6" sm="12">
-                                <h3 className='my-5 text-white'>Listings in last week</h3>
+                                <h3 className='my-5 text-white text-center'>Events in last week</h3>
                                 <LineChart className='chart' data={[1, 2, 3, 4, 5, 6, 7]} labels={['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']} />
                             </Col>
                             <Col lg="6" md="6" sm="12">
-                                <h3 className='my-5 text-white'>Rent/Sale Comparison</h3>
+                                <h3 className='my-5 text-white text-center'>Walk In Comparison</h3>
                                 <PieChart className='chart' data={[5, 7]} />
                             </Col>
                             </Row>
                             <Row className="m-5">
                             <Col lg="6" md="6" sm="12">
-                                <h3 className='my-5 text-white'>Agencies registered</h3>
+                                <h3 className='my-5 text-white text-center'>Shops registered</h3>
                                 <Doughnut className='chart' data={[1, 2, 3, 4, 5, 6, 7]} labels={['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']} />
                             </Col>
                             <Col lg="6" md="6" sm="12">
-                            <h3 className='my-5 text-white'>Types Comparison</h3>
+                            <h3 className='my-5 text-white text-center'>Types Comparison</h3>
                                 <BarChart className='chart' data={[300, 200, 300]} labels={['Basic', 'Premium', 'Premium Plus']} />
                             </Col>
                         </Row>
