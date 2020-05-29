@@ -42,7 +42,7 @@ export default class Doughnut extends React.Component {
   }
   render() {
     return (
-      <canvas className={this.props.className} id="myChart3" width="1160" height="500"></canvas>
+      <canvas className={this.props.className} id="myChart3"></canvas>
     )
   }
 }

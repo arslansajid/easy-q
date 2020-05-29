@@ -85,7 +85,7 @@ function ProfilePage(props) {
       {
         showModal && (
           <Modal
-            size={"md"}
+            size={"lg"}
             fade={false}
             backdrop={"static"}
             isOpen={showModal} toggle={() => setShowModal(!showModal)}>

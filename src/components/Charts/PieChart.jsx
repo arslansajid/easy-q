@@ -31,7 +31,7 @@ export default class PieChart extends React.Component {
   }
   render() {
     return (
-      <canvas className={this.props.className} id="myChart1" width="1160" height="500"></canvas>
+      <canvas className={this.props.className} id="myChart1"></canvas>
     )
   }
 }
