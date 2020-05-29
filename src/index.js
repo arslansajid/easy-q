@@ -6,6 +6,10 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 // styles
 import "assets/css/bootstrap.min.css";
 import "assets/scss/paper-kit.scss";
+
+//date-picker
+import 'react-dates/lib/css/_datepicker.css';
+import 'react-dates/initialize';
 // pages
 import App from "views/examples/App";
 import Login from "views/examples/Login";
