@@ -145,7 +145,7 @@ function ProfilePage(props) {
                         {/* <label>Opening Time</label> */}
                         {/* <Input placeholder="Quantity" type="text" /> */}
                         <div className="my-2">
-                          Regular days
+                          Week days
                         </div>
                         <TextField
                           id="time"
@@ -176,17 +176,45 @@ function ProfilePage(props) {
                         />
                       </Col>
                       <Col className="my-2" md="12">
-                        {/* <label>Opening Time</label> */}
-                        {/* <Input placeholder="Quantity" type="text" /> */}
                         <div className="my-2">
-                          {"Public Holidays & Weekends"}
+                          {"Saturday"}
                         </div>
                         <TextField
                           id="time"
                           label="Opening Time"
                           type="time"
                           defaultValue="07:30"
+                          className={"mr-3"}
+                          InputLabelProps={{
+                            // shrink: true,
+                          }}
+                          inputProps={{
+                            step: 600, // 10 min
+                          }}
+                        />
+                        <TextField
+                          id="time"
+                          label="Closing Time"
+                          type="time"
+                          defaultValue="07:30"
                           // className={classes.textField}
+                          InputLabelProps={{
+                            // shrink: true,
+                          }}
+                          inputProps={{
+                            step: 600, // 10 min
+                          }}
+                        />
+                        </Col>
+                      <Col className="my-2" md="12">
+                        <div className="my-2">
+                          {"Sunday"}
+                        </div>
+                        <TextField
+                          id="time"
+                          label="Opening Time"
+                          type="time"
+                          defaultValue="07:30"
                           className={"mr-3"}
                           InputLabelProps={{
                             // shrink: true,
@@ -210,8 +238,51 @@ function ProfilePage(props) {
                         />
                       </Col>
                       <Col className="my-2" md="12">
-                        <label>Closing Time</label>
-                        <Input placeholder="Quantity" type="text" />
+                        <div className="my-2">
+                          {"Public Holidays"}
+                        </div>
+                        <TextField
+                          id="time"
+                          label="Opening Time"
+                          type="time"
+                          defaultValue="07:30"
+                          className={"mr-3"}
+                          InputLabelProps={{
+                            // shrink: true,
+                          }}
+                          inputProps={{
+                            step: 600, // 10 min
+                          }}
+                        />
+                        <TextField
+                          id="time"
+                          label="Closing Time"
+                          type="time"
+                          defaultValue="07:30"
+                          // className={classes.textField}
+                          InputLabelProps={{
+                            // shrink: true,
+                          }}
+                          inputProps={{
+                            step: 600, // 10 min
+                          }}
+                        />
+                      </Col>
+                      <Col className="my-2" md="12">
+                        <label>Business Type</label>
+                        <select
+                          name="timer_type"
+                          className="form-control"
+                          required
+                        >
+                          <option value="">Select Business Type</option>
+                          <option value="sneakers">Supermarket (Groceries/Food)</option>
+                          <option value="sneakers">Wholesalers/Department Stores (Multiple Goods)</option>
+                          <option value="sneakers">Liquor Stores</option>
+                          <option value="sneakers">Clothing retail Stores</option>
+                          <option value="sneakers">Restaurants</option>
+                          <option value="sneakers">Banking</option>
+                        </select>
                       </Col>
                     <Col className="my-2" md="12">
                       <label>Booking Interval</label>
@@ -245,7 +316,7 @@ function ProfilePage(props) {
                           // onChange={this.handleInputChange}
                           required
                         >
-                          <option value="">Select Booking Interval</option>
+                          <option value="">Select Walk In Ratio</option>
                           <option value="sneakers">10 %</option>
                           <option value="sneakers">20 %</option>
                           <option value="sneakers">30 %</option>
