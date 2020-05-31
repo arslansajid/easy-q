@@ -213,6 +213,7 @@ const Bookings = (props) => {
                                                 address={buyer.address}
                                                 phone={buyer.phone}
                                                 hideButtons={true}
+                                                bookingTime={'1-April-2020 12:35 pm'}
                                             />
                                         </div>
                                     )
@@ -238,6 +239,7 @@ const Bookings = (props) => {
                                                     address={buyer.address}
                                                     phone={buyer.phone}
                                                     hideButtons={true}
+                                                    entryTime={'31-May-2020 4:07 pm'}
                                                 />
                                             </div>
                                         )
