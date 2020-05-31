@@ -32,12 +32,12 @@ const LandingPage = () => {
     <>
       <LandingPageHeader />
       <div className="main">
-        <div className="section text-center">
+        <div className="section blue-bg text-center">
           <Container>
             <Row>
               <Col className="ml-auto mr-auto" md="8">
-                <h2 className="title">Let's talk about EASY-Q</h2>
-                <h5 className="description">
+                <h2 className="title text-white">Let's talk about EASY-Q</h2>
+                <h5 className="description text-white">
                   This is the paragraph where you can write more details about
                   your product. Keep you user engaged by providing meaningful
                   information. Remember that by this time, the user is curious,
@@ -48,11 +48,11 @@ const LandingPage = () => {
             </Row>
           </Container>
         </div>
-        <div className="section landing-section">
+        <div className="section blue-bg landing-section">
           <Container>
             <Row>
               <Col className="ml-auto mr-auto" md="8">
-                <h2 className="text-center">Keep in touch?</h2>
+                <h2 className="text-center text-white">Keep in touch?</h2>
                 <Form className="contact-form">
                   <Row>
                     <Col md="6">
