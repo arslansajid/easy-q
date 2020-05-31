@@ -114,7 +114,7 @@ const Bookings = (props) => {
                         </div>
                         <h2 className="py-3 text-white">Bookings</h2>
                     </Col>
-                    <Col lg="12" className="ml-auto mr-auto d-flex align-items-center justify-content-center my-5">
+                    <Col lg="6" className="ml-auto mr-auto d-flex align-items-center justify-content-center my-5">
                         <SingleDatePicker
                           date={bookingFilterDate} // momentPropTypes.momentObj or null
                           onDateChange={date => setBookingFilterDate(date)} // PropTypes.func.isRequired
@@ -124,6 +124,39 @@ const Bookings = (props) => {
                           displayFormat={"DD-MMM-YYYY"}
                           placeholder="Select date"
                           numberOfMonths={1}
+                          className={"w-100"}
+                        />
+                    </Col>
+                    <Col lg="3" className="ml-auto mr-auto d-flex align-items-center justify-content-center my-5">
+                        <TextField
+                          id="time"
+                          label="Start Time"
+                          type="time"
+                          defaultValue="07:30"
+                          className={"w-100 input-white"}
+                          InputLabelProps={{
+                            // shrink: true,
+                          }}
+                          inputProps={{
+                            step: 600, // 10 min,
+                          }}
+                          InputProps={{ disableUnderline: true }}
+                        />
+                    </Col>
+                    <Col lg="3" className="ml-auto mr-auto d-flex align-items-center justify-content-center my-5">
+                        <TextField
+                          id="time"
+                          label="End Time"
+                          type="time"
+                          defaultValue="07:40"
+                          className={"w-100 input-white"}
+                          InputLabelProps={{
+                            // shrink: true,
+                          }}
+                          inputProps={{
+                            step: 600, // 10 min
+                          }}
+                          InputProps={{ disableUnderline: true }}
                         />
                     </Col>
                     <Col lg="12">
