@@ -23,7 +23,7 @@ export default class Doughnut extends React.Component {
       },
       options: {
         legend: {
-          display: false
+          display: true
          },
          tooltips: {
            borderColor: '#202020',

@@ -24,7 +24,7 @@ export default class ListingChart extends React.Component {
       options: {
         scaleStartValue : 0,
         legend: {
-          display: false
+          display: true
          },
          tooltips: {
            borderColor: '#202020',
