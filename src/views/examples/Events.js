@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import UserCard from "../../components/UserCard";
 import QRScanner from "../../components/QRScanner";
 import {
@@ -13,8 +13,13 @@ import {
     ModalBody,
     ModalHeader,
     ModalFooter,
-    Input
+    Form,
+    Input,
+    InputGroupAddon,
+    InputGroupText,
+    InputGroup,
 } from "reactstrap";
+import TextField from '@material-ui/core/TextField';
 
 const buyers = [
     {
@@ -49,6 +54,7 @@ const Events = (props) => {
     const [result, setResult] = React.useState(false);
     const [bookingIdInput, setBookingIdInput] = useState("");
     const [showBookingIdInput, setShowBookingIdInput] = useState(false);
+    const [showWalkInModal, setShowWalkInModal] = useState(false);
 
     React.useEffect(() => {
         window.scrollTo(0, 0);
@@ -75,10 +81,12 @@ const Events = (props) => {
                             />
                         </div>
                         <h2 className="py-3 text-white">Events</h2>
-
                     </Col>
                     <Col className="ml-auto mr-auto py-5" lg="6">
                         <Button onClick={() => setShowScanner(true)} className="w-100" color="danger" size="lg">SCAN</Button>
+                    </Col>
+                    <Col className="ml-auto mr-auto py-lg-5 py-md-5 pb-lg-0 pb-md-0 pb-5" lg="6">
+                        <Button onClick={() => setShowWalkInModal(true)} className="w-100" color="warning" size="lg">WALK IN</Button>
                     </Col>
                     <Col lg="12">
                         <div className="nav-tabs-navigation">
@@ -198,7 +206,6 @@ const Events = (props) => {
                         </ModalFooter>
                     </Modal>
                 )}
-
             {
                 showResultModal && (
                     <Modal
@@ -213,6 +220,83 @@ const Events = (props) => {
                         </ModalBody>
                         <ModalFooter className="p-2">
                             <Button color="danger" onClick={() => setShowResultModal(false)} size="large" className="">Close</Button>
+                        </ModalFooter>
+                    </Modal>
+                )}
+            {
+                showWalkInModal && (
+                    <Modal
+                        size={"lg"}
+                        fade={false}
+                        backdrop={"static"}
+                        isOpen={showWalkInModal} toggle={() => setShowWalkInModal(!showWalkInModal)}>
+                        <ModalHeader className="text-black">Walk In Booking</ModalHeader>
+                        <ModalBody className="d-flex justify-content-center align-items-center flex-column">
+                            <Form className="user-form">
+                                <Row>
+                                    <Col className="my-2" md="12">
+                                        <label>First Name</label>
+                                        <InputGroup>
+                                            <InputGroupAddon addonType="prepend">
+                                                <InputGroupText>
+                                                    <i className="fa fa-user" />
+                                                </InputGroupText>
+                                            </InputGroupAddon>
+                                            <Input placeholder="First Name" type="text" />
+                                        </InputGroup>
+                                    </Col>
+                                    <Col className="my-2" md="12">
+                                        <label>Last Name</label>
+                                        <InputGroup>
+                                            <InputGroupAddon addonType="prepend">
+                                                <InputGroupText>
+                                                    <i className="fa fa-user" />
+                                                </InputGroupText>
+                                            </InputGroupAddon>
+                                            <Input placeholder="Last Name" type="email" />
+                                        </InputGroup>
+                                    </Col>
+                                    <Col className="my-2" md="12">
+                                        <label>Phone</label>
+                                        <InputGroup>
+                                            <InputGroupAddon addonType="prepend">
+                                            <InputGroupText>
+                                                <i className="fa fa-phone" />
+                                            </InputGroupText>
+                                            </InputGroupAddon>
+                                            <Input placeholder="Phone" type="number" />
+                                        </InputGroup>
+                                    </Col>
+                                    <Col className="my-2" md="12">
+                                        <label>Gender</label>
+                                        <select
+                                        name="timer_type"
+                                        // value={sneakers.timer_type}
+                                        className="form-control"
+                                        // onChange={this.handleInputChange}
+                                        required
+                                        >
+                                        <option value="">Select Gender</option>
+                                            <option value="sneakers">Male</option>
+                                            <option value="sneakers">Female</option>
+                                        </select>
+                                    </Col>
+                                    <Col className="my-2" md="12">
+                                        <TextField
+                                            id="time"
+                                            label="Date of Birth"
+                                            type="date"
+                                            InputLabelProps={{
+                                                shrink: true,
+                                            }}
+                                            />
+                                    </Col>
+                                </Row>
+                            </Form>
+                        </ModalBody>
+                        <ModalFooter className="p-2">
+                            <Button color="success" onClick={() => setShowWalkInModal(false)} size="large" className="">Save</Button>
+                            <Button color="danger" onClick={() => setShowWalkInModal(false)} size="large" className="">Close</Button>
                         </ModalFooter>
                     </Modal>
                 )}
