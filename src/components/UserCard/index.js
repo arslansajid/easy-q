@@ -3,7 +3,7 @@ import { Container, Row, Col, Card, Button } from "reactstrap";
 import { Link } from "react-router-dom";
 
 const UserCard = (props) => {
-    const { index, userId, name, email, address, phone, handleClick, hideButtons, bookingTime, entryTime } = props;
+    const { index, userId, name, email, address, phone, handleClick, hideButtons, bookingTime, entryTime, exitTime } = props;
 
     return (
         <Card key={index} className="user-card">
@@ -32,6 +32,14 @@ const UserCard = (props) => {
                                 <>
                                     <h6>Entry Time</h6>
                                     <h5 className="my-2">{entryTime}</h5>
+                                </>
+                            )
+                        }
+                        {
+                            exitTime && (
+                                <>
+                                    <h6>Exit Time</h6>
+                                    <h5 className="my-2">{exitTime}</h5>
                                 </>
                             )
                         }

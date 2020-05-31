@@ -240,6 +240,7 @@ const Bookings = (props) => {
                                                     phone={buyer.phone}
                                                     hideButtons={true}
                                                     entryTime={'31-May-2020 4:07 pm'}
+                                                    exitTime={'31-May-2020 9:35 pm'}
                                                 />
                                             </div>
                                         )
