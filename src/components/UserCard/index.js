@@ -43,6 +43,15 @@ const UserCard = (props) => {
                                 </>
                             )
                         }
+                        {bookingTime && (
+                            <Button
+                                color="danger"
+                                size="sm"
+                                className="my-2 w-100"
+                            >
+                                Cancel
+                            </Button>
+                        )}
                         {!hideButtons && (
                             <div className="d-flex justify-content-between align-items-center mt-3">
                                 {/* <img src={require("../../assets/img/qr.png")} alt="qr-img" /> */}
