@@ -114,7 +114,7 @@ const Bookings = (props) => {
                         </div>
                         <h2 className="py-3 text-white">Bookings</h2>
                     </Col>
-                    <Col lg="6" className="ml-auto mr-auto d-flex align-items-center justify-content-center my-5">
+                    <Col lg="4" className="ml-auto mr-auto d-flex align-items-center justify-content-center my-5">
                         <SingleDatePicker
                           date={bookingFilterDate} // momentPropTypes.momentObj or null
                           onDateChange={date => setBookingFilterDate(date)} // PropTypes.func.isRequired
@@ -158,6 +158,15 @@ const Bookings = (props) => {
                           }}
                           InputProps={{ disableUnderline: true }}
                         />
+                    </Col>
+                    <Col lg="2" className="ml-auto mr-auto d-flex align-items-center justify-content-center my-5">
+                        <Button
+                            className="w-100"
+                            color="danger"
+                            size="lg"
+                        >
+                            Apply
+                        </Button>
                     </Col>
                     <Col lg="12">
                         <div className="nav-tabs-navigation">

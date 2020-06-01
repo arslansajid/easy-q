@@ -193,7 +193,14 @@
 }
 
 .DateInput_1 {
-    width: 100% !important;
+    width: 99% !important;
+    left: 1px;
+}
+
+.DateInput_input,
+.DateInput_input__focused {
+    border: unset !important;
+    min-height: 48px;
 }
 
 .SingleDatePicker_picker {
@@ -205,7 +212,24 @@
 .SingleDatePickerInput {
     width: 100% !important;
   }
+  
+  .SingleDatePickerInput {
+    border: 2px solid #f5593d !important;
+    z-index: 100;
+  }
+
+  .CalendarDay__selected,
+  .CalendarDay__selected:active,
+  .CalendarDay__selected:hover {
+    background: #f5593d !important;
+    border: 1px solid #f5593d !important;
+  }
 
 .input-white {
     background: white !important;
+    border: 2px solid #f5593d !important;
+}
+
+.MuiFormLabel-root {
+    padding: 4px !important;
 }
