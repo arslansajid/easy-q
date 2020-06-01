@@ -49,7 +49,7 @@ const UserCard = (props) => {
                                 size="sm"
                                 className="my-2 w-100"
                             >
-                                Cancel
+                                Cancel / Reschedule
                             </Button>
                         )}
                         {!hideButtons && (

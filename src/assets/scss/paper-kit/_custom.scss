@@ -211,6 +211,7 @@
 .SingleDatePicker,
 .SingleDatePickerInput {
     width: 100% !important;
+    border-radius: 5px;
   }
   
   .SingleDatePickerInput {
@@ -228,8 +229,10 @@
 .input-white {
     background: white !important;
     border: 2px solid #f5593d !important;
+    border-radius: 5px;
 }
 
 .MuiFormLabel-root {
     padding: 4px !important;
+    white-space: nowrap;
 }
