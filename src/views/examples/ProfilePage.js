@@ -269,6 +269,10 @@ function ProfilePage(props) {
                         />
                       </Col>
                       <Col className="my-2" md="12">
+                        <label>Maximum Users Allowed</label>
+                        <Input placeholder="Max Users" defaultValue="25" type="number" />
+                      </Col>
+                      <Col className="my-2" md="12">
                         <label>Business Type</label>
                         <select
                           name="timer_type"
