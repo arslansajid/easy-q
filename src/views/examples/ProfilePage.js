@@ -298,11 +298,12 @@ function ProfilePage(props) {
                           required
                         >
                           <option value="">Select Booking Interval</option>
-                          <option value="sneakers">10 minutes</option>
-                          <option value="sneakers">20 minutes</option>
-                          <option value="sneakers">30 minutes</option>
-                          <option value="sneakers">40 minutes</option>
-                          <option value="sneakers">50 minutes</option>
+                          <option value="10">10 minutes</option>
+                          <option value="20">20 minutes</option>
+                          <option value="30">30 minutes</option>
+                          <option value="40">40 minutes</option>
+                          <option value="50">50 minutes</option>
+                          <option value="60">60 minutes</option>
                         </select>
                       </Col>
 
