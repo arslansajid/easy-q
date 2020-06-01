@@ -155,7 +155,7 @@ function ProfilePage(props) {
                           // className={classes.textField}
                           className={"mr-3"}
                           InputLabelProps={{
-                            // shrink: true,
+                            shrink: true,
                           }}
                           inputProps={{
                             step: 600, // 10 min
@@ -168,7 +168,7 @@ function ProfilePage(props) {
                           defaultValue="07:30"
                           // className={classes.textField}
                           InputLabelProps={{
-                            // shrink: true,
+                            shrink: true,
                           }}
                           inputProps={{
                             step: 600, // 10 min
@@ -186,7 +186,7 @@ function ProfilePage(props) {
                           defaultValue="07:30"
                           className={"mr-3"}
                           InputLabelProps={{
-                            // shrink: true,
+                            shrink: true,
                           }}
                           inputProps={{
                             step: 600, // 10 min
@@ -199,7 +199,7 @@ function ProfilePage(props) {
                           defaultValue="07:30"
                           // className={classes.textField}
                           InputLabelProps={{
-                            // shrink: true,
+                            shrink: true,
                           }}
                           inputProps={{
                             step: 600, // 10 min
@@ -217,7 +217,7 @@ function ProfilePage(props) {
                           defaultValue="07:30"
                           className={"mr-3"}
                           InputLabelProps={{
-                            // shrink: true,
+                            shrink: true,
                           }}
                           inputProps={{
                             step: 600, // 10 min
@@ -230,7 +230,7 @@ function ProfilePage(props) {
                           defaultValue="07:30"
                           // className={classes.textField}
                           InputLabelProps={{
-                            // shrink: true,
+                            shrink: true,
                           }}
                           inputProps={{
                             step: 600, // 10 min
@@ -248,7 +248,7 @@ function ProfilePage(props) {
                           defaultValue="07:30"
                           className={"mr-3"}
                           InputLabelProps={{
-                            // shrink: true,
+                            shrink: true,
                           }}
                           inputProps={{
                             step: 600, // 10 min
@@ -261,7 +261,7 @@ function ProfilePage(props) {
                           defaultValue="07:30"
                           // className={classes.textField}
                           InputLabelProps={{
-                            // shrink: true,
+                            shrink: true,
                           }}
                           inputProps={{
                             step: 600, // 10 min
